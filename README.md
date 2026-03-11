@@ -4,7 +4,7 @@ A curated collection of **55 prompt templates** for [GetThatQuick](https://githu
 
 Two collections:
 - **Framework Templates** — 27 templates implementing proven prompt engineering frameworks (RTF, RISEN, CO-STAR, Chain of Thought, etc.)
-- **Field Templates** — 28 battle-tested workflows for real professional use cases (development, product, design, business, writing, learning)
+- **Field Templates** — 45 battle-tested workflows for real professional use cases across 12 domains
 
 ## Categories
 
@@ -146,6 +146,50 @@ Battle-tested workflows for real professional use cases, inspired by Andrej Karp
 | `feynman-explainer` | **Feynman Explainer** | Explain any concept from first principles |
 | `study-plan` | **Study Plan** | Personalized curriculum with milestones and resources |
 | `socratic-debate` | **Socratic Debate** | Stress-test any claim or belief through questioning |
+
+### Finance
+| ID | Template | What It Does |
+|---|---|---|
+| `financial-scenario-planner` | **Scenario Planner** | Bull / base / bear analysis for any financial decision |
+| `personal-budget-builder` | **Personal Budget Builder** | Income, debt repayment (snowball vs avalanche), savings plan |
+| `investment-thesis` | **Investment Thesis** | Structure a conviction-based thesis for any asset |
+| `company-financial-analysis` | **Company Financial Analysis** | Revenue quality, profitability, cash flow, red flags memo |
+
+### HR
+| ID | Template | What It Does |
+|---|---|---|
+| `job-description-writer` | **JD Writer** | Bias-reduced, outcome-oriented job description |
+| `performance-review-writer` | **Performance Review** | SBI-structured, evidence-backed review |
+| `1on1-prep` | **1-on-1 Prep** | Agenda, talking points, and feedback scripts for any 1-on-1 |
+| `interview-scorecard` | **Interview Scorecard** | Competency-based behavioral questions with scoring rubric |
+
+### Research
+| ID | Template | What It Does |
+|---|---|---|
+| `literature-review` | **Literature Review** | Map the field, find gaps, position your contribution |
+| `research-synthesis` | **Research Synthesis** | Multi-source synthesis with evidence quality ratings |
+| `hypothesis-generator` | **Hypothesis Generator** | Ranked, testable hypotheses with methodology suggestions |
+
+### Startup / Founder
+| ID | Template | What It Does |
+|---|---|---|
+| `investor-pitch-memo` | **Investor Pitch Memo** | YC-style 1-page investor brief |
+| `competitor-teardown` | **Competitor Teardown** | Deep strategic analysis of a rival |
+| `mvp-definition` | **MVP Definition** | Scope, assumptions, success criteria, kill criteria |
+
+### Sales
+| ID | Template | What It Does |
+|---|---|---|
+| `discovery-call-script` | **Discovery Call Script** | SPIN + MEDDIC qualification framework |
+| `objection-handler` | **Objection Handler** | ARA method responses for top 5 objections |
+| `sales-proposal` | **Sales Proposal** | Value-led, ROI-quantified proposal document |
+
+### Personal
+| ID | Template | What It Does |
+|---|---|---|
+| `life-audit` | **Life Audit** | Reddit-famous annual review across 10 life domains |
+| `journal-insight-extractor` | **Journal Insight Extractor** | Brain dump → cognitive distortions + clarity + next actions |
+| `hard-conversation-prep` | **Hard Conversation Prep** | Prepare for any difficult conversation without damaging the relationship |
 
 ---
 
