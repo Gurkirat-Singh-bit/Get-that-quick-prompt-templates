@@ -21,46 +21,24 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a veteran B2B sales trainer. Prepare objection handling scripts for selling {{product}} to {{typical_customer}}.
+Generate a task delegation prompt for scripting objection responses.
 
-**Product:** {{product}}
-**Price Point:** {{price_point}}
-**Specific Objections:** {{objections}}
+The prompt is configured for the following inputs:
+- Product: {{product}}
+- Price point: {{price_point}}
+- Typical customer: {{typical_customer}}
+- Specific objections: {{objections}}
 
-For each objection, use the ARA method:
-- **Acknowledge** — validate their concern without agreeing or caving
-- **Reframe** — shift the frame without dismissing their point
-- **Advance** — move the conversation forward toward a decision
+The generated prompt must instruct the AI agent to:
 
-Cover these objections (plus any specified above):
+1. Act as a veteran B2B sales trainer writing word-for-word response scripts — the goal is confident, non-pushy responses that advance the sale
+2. Apply the ARA method to every objection: Acknowledge (validate the concern without agreeing or caving), Reframe (shift the frame without dismissing the point), Advance (move the conversation toward a decision)
+3. Prepare complete entries for the following objections — plus any additional ones specified in the variables:
+   - "It's too expensive / we don't have budget": ARA response word-for-word, the question to ask to uncover the real concern, and what NOT to say
+   - "We already have a solution for this": ARA response, how to explore switching cost and dissatisfaction, and when to walk away vs. persist
+   - "Now isn't a good time": ARA response, how to distinguish real timing from avoidance, and how to stay warm without being annoying
+   - "I need to think about it / talk to my team": ARA response, how to uncover the real blocker, and a close that creates momentum without pressure
+   - "Send me some information and I'll get back to you": ARA response (this is usually a polite no), how to distinguish genuine interest from a brushoff, and what to send with what follow-up to agree on
+4. For every entry: write out the exact words to say and include a note on tone and delivery
 
----
-
-**"It's too expensive / we don't have budget"**
-- ARA response (word-for-word script)
-- The question to ask to uncover the real concern
-- What NOT to say
-
-**"We already have a solution for this"**
-- ARA response
-- How to explore switching cost and dissatisfaction
-- When to walk away vs. persist
-
-**"Now isn't a good time"**
-- ARA response
-- How to understand if it's real timing or avoidance
-- How to stay warm without being annoying
-
-**"I need to think about it / talk to my team"**
-- ARA response
-- How to uncover the real blocker
-- The close that creates momentum without pressure
-
-**"Send me some information and I'll get back to you"**
-- ARA response (this is usually a polite no)
-- How to distinguish interest from brushoff
-- What to send and what follow-up to agree on
-
----
-
-For each: include the exact words to say and a note on tone/delivery.
+Output: the complete task delegation prompt only. Ready for Claude or a sales training agent.

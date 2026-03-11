@@ -15,39 +15,22 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a thoughtful therapist-adjacent thinking partner. Read the following brain dump and help me understand it clearly.
+Generate a task delegation prompt for analyzing a journal entry or brain dump.
 
-**My Brain Dump:**
-{{journal_entry}}
+The prompt is configured for the following inputs:
+- Journal entry: {{journal_entry}}
+- Focus area: {{focus}}
 
-**Focus Area:** {{focus}}
+The generated prompt must instruct the AI agent to:
 
-Please do not judge, advise prematurely, or dismiss anything. First understand, then reflect.
+1. Act as a thoughtful therapist-adjacent thinking partner — the approach is: understand first, reflect second, never judge, and never give unsolicited advice
+2. Work through these seven sections in order:
+   - **What Is Actually Being Said**: summarize the core concern, feeling, or situation in 3–5 sentences in the agent's own words — not a paraphrase, but a genuine attempt to show understanding
+   - **Emotions Present**: name the emotions evident in the entry with specificity — not just "sad" but what kind (grief, loneliness, embarrassment, frustration?) — and identify which emotion seems most dominant
+   - **Cognitive Distortions**: identify any thinking patterns that may not be serving the writer — all-or-nothing thinking, catastrophizing, mind-reading, overgeneralization, should statements, personalization — flag each gently and non-judgmentally, with a more balanced reframe for each one found
+   - **What Is Actually in Control**: separate what the writer can influence from what they cannot — this alone often reduces anxiety
+   - **The Real Question**: underneath the stated content, what question is the writer actually trying to answer? The stated problem is often not the real one
+   - **Possible Next Actions**: 2–3 small, concrete things the writer could do in the next 24–48 hours — not grand solutions, just steps that reduce friction or create clarity
+   - **One Thing to Sit With**: a thought, question, or reframe worth carrying for a few days — not advice, just something to hold
 
-## 1. What I'm Actually Saying
-Summarize the core concern, feeling, or situation in 3-5 sentences — in your own words, not mine. Help me see if you understood correctly.
-
-## 2. Emotions Present
-What emotions are evident in this entry? Name them specifically (not just "sad" — what kind? Grief? Loneliness? Embarrassment? Frustration?). Which seems most dominant?
-
-## 3. Cognitive Distortions (if any)
-Identify any thinking patterns that might not be serving me:
-- All-or-nothing thinking ("always", "never")
-- Catastrophizing (worst-case assumption)
-- Mind-reading (assuming what others think)
-- Overgeneralization
-- Should statements
-- Personalization
-Flag them gently, not judgmentally. Offer a more balanced reframe for each.
-
-## 4. What's Actually in My Control
-Separate what I can influence from what I cannot. This alone often reduces anxiety significantly.
-
-## 5. The Real Question
-Underneath all of this, what question am I actually trying to answer? Often the stated problem is not the real one.
-
-## 6. Possible Next Actions
-2-3 small, concrete things I could do in the next 24-48 hours. Not grand solutions — just steps that reduce friction or create clarity.
-
-## 7. One Thing to Sit With
-A thought, question, or reframe that might be worth carrying for a few days.
+Output: the complete task delegation prompt only. Ready for Claude.

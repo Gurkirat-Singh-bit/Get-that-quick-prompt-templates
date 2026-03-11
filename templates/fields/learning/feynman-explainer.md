@@ -18,26 +18,23 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a world-class teacher applying the Feynman Technique. Explain **{{concept}}** to **{{audience}}**.
+Generate a task delegation prompt for producing a Feynman-style explanation of a concept.
 
-**Depth:** {{depth}}
+The prompt is configured for the following inputs:
+- Concept: {{concept}}
+- Audience: {{audience}}
+- Depth: {{depth}}
 
-Follow the Feynman Technique:
+The generated prompt must instruct the AI agent to:
 
-## Step 1: Simple Explanation
-Explain the concept as if your audience has never heard of it. Use plain language, no jargon. If you must use a technical term, immediately define it in one plain sentence.
+1. Act as a world-class teacher applying the Feynman Technique — the goal is genuine understanding, not the appearance of it
+2. Work through all 6 steps of the technique in order:
+   - **Step 1 — Simple Explanation**: explain the concept as if the audience has never encountered it, using plain language with zero jargon — if a technical term is unavoidable, define it immediately in one plain sentence
+   - **Step 2 — Core Analogy**: find one analogy from everyday life that captures the essence of the concept, explain how the analogy maps to reality, and explicitly state where the analogy breaks down
+   - **Step 3 — Worked Example**: walk through one concrete, specific example demonstrating the concept in action — show the input and output, or before and after
+   - **Step 4 — Common Misconceptions**: identify 2–3 things most people misunderstand or oversimplify about this concept and explain what the correct understanding looks like
+   - **Step 5 — First-Principles Rebuild**: reconstruct the explanation using only what the audience already understands — no appeals to authority, derive it from foundational ideas
+   - **Step 6 — One-Sentence Definition**: write a single sentence that captures the complete idea accurately — simple but not simplistic
+3. If the explanation reveals a genuine gap in the available knowledge, flag it explicitly rather than papering over it
 
-## Step 2: The Core Analogy
-Find one analogy or metaphor from everyday life that captures the essence of this concept. Explain how the analogy maps to reality, and where it breaks down.
-
-## Step 3: Worked Example
-Walk through one concrete, specific example that demonstrates the concept in action. Show the "before" and "after" or the "input" and "output."
-
-## Step 4: The Gaps
-Identify the 2-3 things most people misunderstand or oversimplify about this concept. What does the simple explanation miss?
-
-## Step 5: First-Principles Rebuild
-Rebuild the explanation from scratch using only things your audience already understands. No appeals to authority — derive it from first principles.
-
-## Step 6: The One-Sentence Definition
-Write a single sentence that captures the complete idea accurately. This is the hardest part — it should be simple but not simplistic.
+Output: the complete task delegation prompt only. Ready for Claude, GPT, or any explanatory AI agent.

@@ -21,37 +21,24 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a talent acquisition expert. Build a structured interview scorecard for the following role.
+Generate a task delegation prompt for creating a structured interview scorecard.
 
-**Role:** {{role}}
-**Seniority:** {{seniority}}
-**Key Competencies:** {{key_competencies}}
-**Duration:** {{interview_duration}}
+The prompt is configured for the following variables: role being hired for, key competencies to evaluate, seniority level, and interview duration.
 
-Produce a complete interview guide:
+The generated prompt must instruct the AI agent to:
 
-## Interview Structure
-Time allocation across competency areas that fits within {{interview_duration}}.
+1. Act as a talent acquisition expert building a guide that produces consistent, evidence-based hiring decisions
+2. Produce a time-blocked interview structure that fits within the specified duration and allocates time proportionally across competencies
+3. For each competency, produce a complete entry:
+   - Why it matters for this role (1 sentence)
+   - A behavioral STAR question ("Tell me about a time when...")
+   - 2–3 follow-up probes to go deeper when answers are vague
+   - Green flags describing what strong answers look like
+   - Red flags describing what weak or concerning answers signal
+   - A 1–5 scoring rubric with a description for each level (1=Poor through 5=Exceptional)
+4. Add 2–3 culture and values questions calibrated to the seniority level
+5. Include a candidate questions quality section — a guide for the interviewer on how to evaluate the questions the candidate asks
+6. Produce a summary scorecard template: competency, score (1–5), evidence notes, and hire recommendation
+7. Define decision thresholds: what score combination equals a strong hire, hire, and no-hire, and how to handle split decisions in a panel
 
-## Competency Scorecard
-For each competency listed, provide:
-
-**[Competency Name]**
-- *Why it matters for this role* (1 sentence)
-- *Behavioral question* (STAR-format trigger: "Tell me about a time when...")
-- *Follow-up probes* (2-3 questions to go deeper if answer is vague)
-- *Green flags* (what strong answers look like)
-- *Red flags* (warning signs in weak answers)
-- *Scoring rubric* (1=Poor / 2=Below expectations / 3=Meets / 4=Exceeds / 5=Exceptional — describe each)
-
-## Culture & Values Questions
-2-3 questions to assess alignment with typical team culture.
-
-## Candidate Questions Section
-Space for the interviewer to note the quality of questions the candidate asks.
-
-## Overall Scorecard Template
-A summary table: competency → score (1-5) → evidence (brief notes) → hire recommendation.
-
-## Decision Framework
-What score threshold = strong hire / hire / no hire? How to handle split decisions across a panel.
+Output: the complete task delegation prompt only. Ready for Claude or an HR agent.

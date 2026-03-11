@@ -30,32 +30,21 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior recruiter and people ops leader. Write a compelling, bias-reduced job description.
+Generate a task delegation prompt for writing a bias-reduced, compelling job description.
 
-**Role:** {{role_title}}
-**Team:** {{team_context}}
-**Responsibilities:** {{core_responsibilities}}
-**Success in 6 months:** {{success_criteria}}
-**Must-haves:** {{must_haves}}
-**Nice-to-haves:** {{nice_to_haves}}
-**Compensation:** {{comp_range}}
+The prompt is configured for the following variables: role title, team context, core responsibilities, success criteria, must-haves, nice-to-haves, and compensation range.
 
-Guidelines to follow:
-- Lead with the company mission and team impact — not a laundry list of requirements
-- Frame responsibilities as outcomes ("You will own X") not tasks ("Responsibilities include X")
-- Replace years-of-experience requirements with skill/capability descriptions
-- Avoid gendered language (use "they", avoid "rockstar", "ninja", "aggressive")
-- Keep requirements list to 5 must-haves max — every extra requirement removes 10% of applicants
-- Include the compensation range (it increases application quality significantly)
-- End with why this role is genuinely exciting
+The generated prompt must instruct the AI agent to:
 
-Structure:
-1. About the company (2 sentences, mission-focused)
-2. About the role (what this person owns and why it matters)
-3. What you'll do (5-7 outcome-oriented bullets)
-4. What we're looking for (must-haves only — skills not years)
-5. Nice to have (brief)
-6. What we offer (comp, benefits, culture)
-7. How to apply
+1. Act as a senior recruiter and people ops leader who understands how job descriptions attract or repel candidates
+2. Write a JD that follows these non-negotiable rules:
+   - Lead with company mission and team impact, not a list of requirements
+   - Frame all responsibilities as outcomes using "You will own X" not "Responsibilities include X"
+   - Replace years-of-experience requirements with skill and capability descriptions
+   - Avoid gendered language — use "they", avoid "rockstar", "ninja", "aggressive", "dominant"
+   - Cap the must-haves list at 5 items maximum
+   - Include the compensation range
+3. Use this exact structure: company overview (2 sentences, mission-focused), role overview (what this person owns and why it matters), what you'll do (5–7 outcome-oriented bullets), what we're looking for (must-haves only, skills not years), nice to have (brief), what we offer (comp, benefits, culture), how to apply
+4. After the JD, produce a separate bias audit: flag any phrases that may introduce unconscious bias and suggest a replacement for each flagged phrase
 
-After the JD, flag any phrases that may introduce unconscious bias.
+Output: the complete task delegation prompt only. Ready for Claude or an HR agent.

@@ -1,35 +1,35 @@
 ---
 id: "smart-goals-framework"
-title: "SMART Goals Framework: Specific, Measurable, Achievable, Relevant, Time-bound"
-description: "Transform vague goals into clear, actionable SMART objectives — Specific, Measurable, Achievable, Relevant, and Time-bound."
+title: "SMART Goals: Goal-to-Plan Agent Prompt"
+description: "Generate a SMART goals prompt to delegate goal structuring to an AI agent — turns a vague ambition into a specific, measurable, actionable plan."
 category: "frameworks/goal-oriented"
-tags: ["smart", "goals", "framework", "planning", "objectives", "strategy"]
+tags: ["smart", "goals", "planning", "agent", "delegation", "productivity"]
 variables:
   - name: "goal_area"
     label: "Goal Area (what you want to achieve)"
     required: true
   - name: "timeframe"
-    label: "Timeframe (deadline or time period)"
+    label: "Timeframe (deadline or time horizon)"
     required: true
   - name: "context"
-    label: "Context (current situation, resources, or constraints)"
+    label: "Context (current situation, resources, constraints)"
     required: false
 createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-**Goal Area:** {{goal_area}}
+Generate a SMART goals agent prompt that will be handed to Claude or another AI to transform a vague goal into a structured, actionable plan.
 
-**Context:** {{context}}
+Configure it for:
+- Goal area: {{goal_area}}
+- Timeframe: {{timeframe}}
+- Context: {{context}}
 
-**Timeframe:** {{timeframe}}
+The generated prompt must instruct the agent to:
+1. Take {{goal_area}} and {{context}} as input
+2. Transform it into a SMART goal: Specific, Measurable, Achievable, Relevant, Time-bound
+3. For each SMART dimension: apply it to the goal and explain the implication
+4. Produce: a single SMART goal statement + a phased action plan with milestones mapped to {{timeframe}}
+5. Flag any assumptions made about feasibility or resources
 
-Transform the above into a complete SMART goal:
-
-- **Specific:** Define exactly what will be accomplished, by whom, and how.
-- **Measurable:** Define clear metrics, KPIs, or milestones to track progress objectively.
-- **Achievable:** Confirm this goal is realistic given the current context and available resources.
-- **Relevant:** Explain why this goal matters and how it connects to broader objectives.
-- **Time-bound:** Break the timeframe into milestones with specific deadlines for each.
-
-Conclude with a final SMART goal statement in a single sentence, followed by a structured action plan.
+Output: the complete agent prompt only. The receiving agent should be able to produce a polished SMART goal plan without any follow-up. Ready for Claude, GPT, or any planning-capable AI.

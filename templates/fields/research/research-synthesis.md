@@ -21,38 +21,20 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior research analyst. Synthesize the following sources into a coherent summary.
+Generate a task delegation prompt for synthesizing findings from multiple research sources.
 
-**Research Question:** {{research_question}}
-**Audience:** {{audience}}
-**Output Length:** {{output_length}}
+The prompt is configured for the following variables: research question, sources to synthesize, audience, and output length.
 
-**Sources:**
-{{sources}}
+The generated prompt must instruct the AI agent to:
 
-Produce a structured synthesis:
+1. Act as a senior research analyst producing a synthesis that enables a decision or advances understanding
+2. Write the synthesis calibrated to the specified audience and output length, structured as follows:
+   - **Executive Summary**: 3–5 sentences on what the evidence says overall — the single most important takeaway across all sources
+   - **Areas of Consensus**: what the sources agree on, citing which specific sources align on which specific points
+   - **Contradictions and Conflicts**: where sources disagree and what most likely explains the contradiction (methodology, context, date, population)
+   - **Evidence Quality Assessment**: for each source, assess study design strength (RCT, observational, case study, expert opinion), sample size and generalizability, potential biases or conflicts of interest, and assign an overall confidence level (High/Medium/Low)
+   - **Key Findings Ranked by Evidence Strength**: the most important, best-supported findings ordered from strongest to weakest evidence
+   - **Gaps and Uncertainties**: what this body of evidence does not answer, and what stronger evidence would require
+   - **Implications**: what the specified audience should believe, decide, or investigate further based on this synthesis
 
-## 1. Executive Summary
-3-5 sentences capturing the most important finding across all sources. What does the evidence say, overall?
-
-## 2. Areas of Consensus
-What do the sources agree on? Cite which sources align and on what specific points.
-
-## 3. Contradictions & Conflicts
-Where do sources disagree? What might explain the contradiction (methodology, context, date, population)?
-
-## 4. Evidence Quality Assessment
-For each source or finding, assess:
-- Study design strength (RCT, observational, case study, expert opinion)
-- Sample size and generalizability
-- Potential biases or conflicts of interest
-- Overall confidence level: High / Medium / Low
-
-## 5. Key Findings (Ranked by Evidence Strength)
-The most important, best-supported findings, ordered from strongest to weakest evidence.
-
-## 6. Gaps & Uncertainties
-What does this body of evidence not answer? What would stronger evidence require?
-
-## 7. Implications
-For the stated audience: what should they believe, decide, or investigate further based on this synthesis?
+Output: the complete task delegation prompt only. Ready for Claude or any research agent.

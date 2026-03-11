@@ -21,45 +21,25 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior equity analyst. Analyze the following company's financial health and write a memo.
+Generate a task delegation prompt for conducting a company financial analysis.
 
-**Company:** {{company}}
-**Purpose:** {{analysis_purpose}}
-**Comparison Benchmarks:** {{comparison}}
+The prompt is configured for the following inputs:
+- Company: {{company}}
+- Financial data: {{financials}}
+- Analysis purpose: {{analysis_purpose}}
+- Peer comparison: {{comparison}}
 
-**Financial Data:**
-{{financials}}
+The generated prompt must instruct the AI agent to:
 
-Produce a financial analysis memo:
+1. Act as a senior equity analyst writing a memo that delivers a clear verdict for the stated purpose
+2. Write a financial analysis memo with these sections:
+   - **Executive Summary**: 3 sentences — the financial health in plain English, the overall bullish or bearish assessment, and the single biggest driver
+   - **Revenue Quality**: revenue trend (growth rate, acceleration/deceleration), composition (recurring vs. one-time, concentration risk), and predictability
+   - **Profitability**: gross margin trend and comparison to peers, operating leverage (are margins expanding with revenue?), and EBITDA/net income quality with any non-recurring items flagged
+   - **Balance Sheet Strength**: cash position and runway, debt load and coverage ratios, working capital dynamics
+   - **Cash Flow Analysis**: FCF vs. net income as a quality check, capex intensity, cash conversion cycle
+   - **Red Flags**: any concerning patterns — accounting irregularities, deteriorating metrics, covenant risk, management changes
+   - **Peer Comparison**: how the company compares to the specified peers on the most important metrics for the stated purpose
+   - **Conclusion**: a single clear takeaway — financially fit, at risk, or requires monitoring — framed specifically for the stated analysis purpose
 
-## Executive Summary (3 sentences)
-The financial health in plain English. Bullish or bearish overall assessment and the single biggest driver.
-
-## Revenue Quality
-- Revenue trend (growth rate, acceleration/deceleration)
-- Revenue composition (recurring vs. one-time, concentration risk)
-- Revenue predictability and visibility
-
-## Profitability
-- Gross margin trend and vs. peers
-- Operating leverage (are margins expanding as revenue grows?)
-- EBITDA and net income quality (any non-recurring items?)
-
-## Balance Sheet Strength
-- Cash position and runway
-- Debt load and coverage ratios
-- Working capital dynamics
-
-## Cash Flow Analysis
-- FCF generation vs. net income (quality check)
-- Capex intensity
-- Cash conversion cycle
-
-## Red Flags
-Any concerning patterns: accounting irregularities, deteriorating metrics, covenant risk, management changes.
-
-## Peer Comparison
-How does {{company}} compare to {{comparison}} across the most important metrics?
-
-## Conclusion
-Financially fit, at risk, or requires monitoring? One clear takeaway for the stated purpose.
+Output: the complete task delegation prompt only. Ready for Claude or a financial agent.

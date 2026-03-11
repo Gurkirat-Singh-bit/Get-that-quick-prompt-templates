@@ -1,30 +1,35 @@
 ---
 id: "chain-of-thought"
-title: "Chain of Thought: Step-by-Step Reasoning"
-description: "Guide the AI to reason through a problem sequentially — thinking aloud at each step before reaching a conclusion."
+title: "Chain of Thought: Step-by-Step Reasoning Agent"
+description: "Generate a Chain of Thought prompt to delegate analytical or complex problems to an AI agent — forces visible, sequential reasoning before any conclusion."
 category: "frameworks/reasoning"
-tags: ["chain-of-thought", "cot", "reasoning", "step-by-step", "problem-solving", "analysis"]
+tags: ["chain-of-thought", "cot", "reasoning", "agent", "delegation", "analytical"]
 variables:
   - name: "problem"
-    label: "Problem (what needs to be solved or analyzed?)"
+    label: "Problem or Question (what needs deep reasoning?)"
     required: true
-  - name: "context"
-    label: "Context (relevant background or constraints)"
+  - name: "domain"
+    label: "Domain (e.g. software architecture, financial analysis, medical diagnosis)"
+    required: true
+  - name: "constraints"
+    label: "Constraints (what the reasoning must stay within)"
     required: false
 createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-**Problem:** {{problem}}
+Generate a Chain of Thought delegation prompt for the following problem. This prompt will be given to an AI agent (Claude, GPT, Cursor) that must reason through the problem visibly before giving any answer.
 
-**Context:** {{context}}
+Configure it for:
+- Problem: {{problem}}
+- Domain expertise required: {{domain}}
+- Constraints: {{constraints}}
 
-Think through this problem step by step. Do not jump to a conclusion — reason through each component sequentially:
+The generated prompt must:
+1. Establish the agent's role as a rigorous {{domain}} expert
+2. Present the problem clearly with all necessary context
+3. Include an explicit instruction: "Do not give your final answer first. Think step by step. Number each reasoning step. Only state your conclusion after the reasoning chain is complete."
+4. Require the agent to flag every assumption it makes
+5. End with a format requirement for the final answer
 
-1. Break the problem down into its core elements.
-2. Analyze each element one at a time.
-3. Show your reasoning at every step — state what you know and what you are inferring.
-4. Identify any assumptions you are making and flag them explicitly.
-5. Arrive at a well-supported conclusion only after completing all prior steps.
-
-Think out loud throughout. Only provide your final answer after the full reasoning chain is complete.
+Output: the complete Chain of Thought prompt only. Ready to paste into Claude, ChatGPT, Cursor, or any reasoning-capable agent. The agent receiving this must show all work.

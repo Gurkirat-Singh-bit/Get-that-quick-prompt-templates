@@ -1,32 +1,32 @@
 ---
 id: "4ds-framework"
 title: "4Ds Framework: Define, Delimit, Direct, Detail"
-description: "A systematic 4-part framework for complex tasks — Define the scope, Delimit the boundaries, Direct the approach, and Detail the execution plan."
+description: "Generate a 4Ds-structured agent prompt to delegate project scoping and planning — produces a complete breakdown from definition to execution steps."
 category: "frameworks/goal-oriented"
-tags: ["4ds", "framework", "define", "delimit", "direct", "detail", "project", "planning", "scoping"]
+tags: ["4ds", "framework", "scoping", "planning", "agent", "delegation", "project"]
 variables:
   - name: "project"
-    label: "Project or Task (what needs to be accomplished?)"
+    label: "Project or Task to Scope"
     required: true
   - name: "context"
-    label: "Context (relevant background, constraints, or current state)"
+    label: "Context (background, constraints, current state)"
     required: true
 createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-**Project:** {{project}}
+Generate a 4Ds agent prompt for delegating project scoping and planning.
 
-**Context:** {{context}}
+Configure it for:
+- Project: {{project}}
+- Context: {{context}}
 
-Work through this using the 4Ds framework:
+The generated prompt must instruct the agent to work through all four Ds:
+1. **Define:** Articulate exactly what success looks like. What is delivered and how is completion verified?
+2. **Delimit:** Establish hard scope boundaries — what is in, what is explicitly out, what constraints apply
+3. **Direct:** Recommend the strategic approach — methodology, sequencing rationale, key decisions
+4. **Detail:** Produce a granular execution plan — ordered tasks, logical dependencies, clear ownership model
 
-**Define:** Clearly articulate what success looks like. What exactly needs to be delivered, and how will you know it is done?
+The agent must not skip any D, and must complete them in sequence (each builds on the prior).
 
-**Delimit:** Establish firm boundaries — what is explicitly in scope and what is out of scope? What constraints, dependencies, or assumptions apply?
-
-**Direct:** Outline the strategic approach. What methodology, tools, principles, or sequence will guide the work? Why is this the right approach?
-
-**Detail:** Provide a granular, step-by-step execution plan. Break the work into concrete, actionable tasks with clear sequencing and logical dependencies.
-
-Produce a complete 4Ds breakdown for the stated project.
+Output: the complete 4Ds agent prompt only. The receiving agent should produce a full project breakdown with no ambiguity left. Ready for Claude, GPT, or any planning agent.

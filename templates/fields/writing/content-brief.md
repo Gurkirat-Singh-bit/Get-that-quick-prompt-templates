@@ -24,38 +24,24 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior content strategist. Create a complete content brief.
+Generate a task delegation prompt for creating a complete content brief.
 
-**Topic:** {{topic}}
-**Audience:** {{target_audience}}
-**Goal:** {{content_goal}}
-**Type:** {{content_type}}
-**Competitive Reference:** {{competitor_examples}}
+The prompt is configured for the following inputs:
+- Topic: {{topic}}
+- Target audience: {{target_audience}}
+- Content goal: {{content_goal}}
+- Content type: {{content_type}}
+- Competitor examples: {{competitor_examples}}
 
-Produce a brief with these sections:
+The generated prompt must instruct the AI agent to:
 
-## 1. Angle & Hook
-What unique angle differentiates this piece? What perspective or insight will make someone stop scrolling? Write 3 possible hooks and recommend the strongest.
+1. Act as a senior content strategist producing a brief that a writer can execute without additional context
+2. Develop a unique angle with 3 hook options (and a recommendation on which to lead with), based on what differentiates this piece from the competitor examples
+3. Profile the reader — who they are, what they already know, what question brought them here, and what they want to leave knowing or feeling
+4. Identify the primary keyword and 3–5 secondary keywords, classify the search intent (informational / navigational / transactional / commercial), and suggest a title tag (under 60 characters) and meta description (under 160 characters)
+5. Produce a full H2/H3 content outline — for each section, note the purpose, the key point to make, and the evidence or example needed
+6. List 3–5 key insights the piece must include to be genuinely useful rather than surface-level
+7. Flag clichés, worn-out angles, and common mistakes to avoid in this topic area
+8. Recommend a CTA and the top 2–3 distribution channels for this piece
 
-## 2. Reader Profile
-- Who exactly is this person? What do they already know?
-- What question brought them to this content?
-- What do they want to leave knowing or feeling?
-
-## 3. Primary Keyword & SEO Intent
-- Target keyword and 3-5 secondary keywords
-- Search intent: informational / navigational / transactional / commercial
-- Title tag suggestion (under 60 characters)
-- Meta description (under 160 characters)
-
-## 4. Content Structure
-Full outline with H2 and H3 headings. For each section, note: purpose, key point, evidence or example needed.
-
-## 5. Key Arguments or Insights
-3-5 specific claims or ideas this piece must make to be genuinely useful (not just surface-level).
-
-## 6. What to Avoid
-Common mistakes, clichés, or surface-level takes that make this kind of content forgettable.
-
-## 7. CTA & Distribution
-Recommended call to action and top 2-3 channels to distribute this piece.
+Output: the complete task delegation prompt only. Ready for Claude or a content strategy agent.

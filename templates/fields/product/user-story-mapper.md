@@ -21,26 +21,24 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior product manager. Generate a complete set of user stories for the following feature.
+Generate a task delegation prompt for writing a complete set of user stories with acceptance criteria.
 
-**Feature:** {{feature}}
-**Primary User:** {{user_type}}
-**User Goal:** {{user_goal}}
-**Context:** {{context}}
+The prompt is configured for the following inputs:
+- Feature: {{feature}}
+- User type: {{user_type}}
+- User goal: {{user_goal}}
+- Context: {{context}}
 
-For each user story:
+The generated prompt must instruct the AI agent to:
 
-**Story:** As a {{user_type}}, I want to [specific action] so that [concrete benefit].
+1. Act as a senior product manager writing production-ready user stories
+2. Write all stories strictly in the format: "As a [user], I want [specific action] so that [concrete benefit]"
+3. For each story, produce acceptance criteria in Given/When/Then format covering:
+   - The happy path (primary success scenario)
+   - At least 2 edge cases (boundary conditions, unusual but valid inputs)
+   - At least 1 error state (what happens when something goes wrong)
+4. Append a Definition of Done checklist to every story covering: functional requirement met, error states handled and communicated to the user, mobile/responsive coverage if applicable, accessibility requirements (WCAG 2.1 AA), and analytics event tracked
+5. Flag any stories that require a design clarification or engineering spike before they can be estimated — and explain specifically what needs to be resolved
+6. Cover the full feature scope: main happy path, edge cases, and failure scenarios — no gaps
 
-**Acceptance Criteria (Given/When/Then):**
-- Given [precondition], When [action], Then [expected result]
-- (include at least 3 scenarios per story: happy path, edge case, error state)
-
-**Definition of Done:**
-- [ ] Functional requirement met
-- [ ] Error states handled and communicated to user
-- [ ] Mobile/responsive if applicable
-- [ ] Accessibility requirements met (WCAG 2.1 AA)
-- [ ] Analytics event tracked
-
-Generate stories for: the main happy path, at least 2 edge cases, and at least 1 error/failure scenario. Flag any stories that require design clarification or engineering spike before estimating.
+Output: the complete task delegation prompt only. Ready for Claude or any PM-capable agent.

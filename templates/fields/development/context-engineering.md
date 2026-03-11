@@ -1,53 +1,46 @@
 ---
 id: "context-engineering"
-title: "Context Engineering: Fill the Window Right"
-description: "Karpathy-inspired context engineering — load the AI's context window with exactly the right code, data, and instructions for each step of a complex task."
+title: "Context Engineering: AI Coding Agent System Prompt"
+description: "Generate a system prompt that configures an AI coding agent with full project context — ready to paste into Claude Projects, Cursor, or any coding agent."
 category: "fields/development"
-tags: ["context-engineering", "karpathy", "llm", "agentic", "workflow", "advanced", "coding"]
+tags: ["context-engineering", "system-prompt", "coding-agent", "cursor", "claude", "karpathy"]
 variables:
-  - name: "task"
-    label: "Task (what needs to be built or solved?)"
-    required: true
-  - name: "relevant_code"
-    label: "Relevant Code/Files (paste the most relevant code snippets or describe the files)"
+  - name: "project_name"
+    label: "Project Name"
     required: true
   - name: "tech_stack"
-    label: "Tech Stack (languages, frameworks, dependencies)"
+    label: "Tech Stack (languages, frameworks, key dependencies)"
     required: true
-  - name: "constraints"
-    label: "Constraints (performance, security, style guide, existing patterns to follow)"
+  - name: "architecture_summary"
+    label: "Architecture Summary (how the system is structured)"
     required: true
-  - name: "current_state"
-    label: "Current State (what exists, what is broken, or what is missing)"
+  - name: "conventions"
+    label: "Coding Conventions (naming, style, patterns to follow)"
     required: true
+  - name: "current_task"
+    label: "Current Task or Focus Area"
+    required: true
+  - name: "off_limits"
+    label: "Off-Limits (files, patterns, or approaches to never touch)"
+    required: false
 createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior software engineer working in the following context:
+Generate a complete system prompt to configure a coding AI agent for {{project_name}}. This will be pasted into Claude Projects, Cursor system prompt, or an API system parameter.
 
-**Tech Stack:** {{tech_stack}}
+The system prompt must:
 
-**Current State of the Codebase:**
-{{current_state}}
+1. **Establish project identity:** {{project_name}}, stack: {{tech_stack}}, architecture: {{architecture_summary}}
+2. **Lock in conventions:** {{conventions}} — these are non-negotiable. The agent enforces them in every file it touches.
+3. **Set current focus:** {{current_task}} — the agent knows what it is working on
+4. **Hard constraints:** {{off_limits}} — files and patterns the agent must never modify or introduce
+5. **Behavioral rules to include:**
+   - Always read the relevant existing code before writing new code
+   - Restate the task before implementing it
+   - Flag every assumption made
+   - Write tests for any new logic
+   - Never introduce new dependencies without stating why and asking for confirmation
+   - If something looks wrong in existing code, call it out rather than silently working around it
 
-**Relevant Code:**
-```
-{{relevant_code}}
-```
-
-**Task:**
-{{task}}
-
-**Constraints to follow exactly:**
-{{constraints}}
-
-Before writing any code:
-1. Restate the task in your own words to confirm understanding.
-2. Identify any ambiguities or missing information and state your assumptions.
-3. Describe your approach at a high level before implementing.
-
-Then implement the task. After implementation:
-- Explain what you changed and why.
-- Flag any edge cases, risks, or follow-up work needed.
-- If anything in the provided code looks incorrect or fragile, call it out.
+Output: the complete agent system prompt only. Tightly written, no fluff. The agent using this should need no further orientation before starting work.

@@ -1,30 +1,31 @@
 ---
 id: "5ws-framework"
 title: "5Ws Framework: Who, What, When, Where, Why"
-description: "The classic journalistic framework for complete context — answer Who, What, When, Where, and Why for thorough understanding of any topic."
+description: "Generate a 5Ws-structured prompt to delegate thorough research or analysis to an AI agent — covering all five dimensions."
 category: "frameworks/basic"
-tags: ["5ws", "framework", "who", "what", "when", "where", "why", "journalism", "research", "analysis"]
+tags: ["5ws", "framework", "prompt-generation", "research", "analysis", "agent"]
 variables:
   - name: "topic"
-    label: "Topic or Subject"
+    label: "Topic or Subject to Investigate"
     required: true
-  - name: "context"
-    label: "Context (any known background information)"
+  - name: "depth"
+    label: "Depth Required (quick overview / detailed analysis / exhaustive breakdown)"
+    required: true
+  - name: "output_format"
+    label: "Output Format (e.g. report, structured breakdown, executive summary)"
     required: false
 createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-**Topic:** {{topic}}
+Generate a ready-to-use research prompt using the 5Ws (Who, What, When, Where, Why) framework for the topic: "{{topic}}".
 
-**Context:** {{context}}
+The prompt must instruct the agent to:
+- Investigate at depth level: {{depth}}
+- Cover all five dimensions without skipping any
+- Structure output as: {{output_format}}
+- Conclude with a synthesis that connects all five Ws into a coherent picture
 
-Produce a comprehensive 5Ws analysis:
+The generated prompt should establish the agent's role as a thorough researcher, give it the topic, and specify exactly how to structure and deliver the 5Ws analysis.
 
-- **Who:** Who are the key people, stakeholders, or parties involved?
-- **What:** What exactly happened, needs to happen, or is being discussed?
-- **When:** What is the timeline, sequence of events, or schedule?
-- **Where:** Where does this take place? What is the physical, digital, or organizational environment?
-- **Why:** What are the underlying reasons, motivations, or root causes?
-
-After covering all five Ws, provide a concise synthesis that connects these elements into a complete, coherent picture.
+Output: the complete 5Ws prompt only. No meta-commentary. Ready to hand to Claude, Perplexity, or any research-capable AI agent.

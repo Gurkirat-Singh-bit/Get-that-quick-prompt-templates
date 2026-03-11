@@ -27,35 +27,21 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are an experienced people manager. Write a high-quality performance review.
+Generate a task delegation prompt for writing a high-quality performance review.
 
-**Employee Role:** {{employee_role}}
-**Review Period:** {{review_period}}
-**Overall Rating:** {{overall_rating}}
-**Accomplishments:** {{accomplishments}}
-**Areas for Growth:** {{areas_for_growth}}
-**Goals for Next Period:** {{goals_next_period}}
+The prompt is configured for the following variables: employee role and level, review period, key accomplishments, areas for growth, goals for next period, and overall rating.
 
-Guidelines:
-- Every claim must be backed by a specific example or observable behavior — no generic statements
-- Use the SBI model (Situation → Behavior → Impact) for both positive and constructive feedback
-- Avoid hedging language that softens important feedback ("could potentially consider")
-- Acknowledge complexity fairly — don't oversimplify performance into just positives or negatives
-- The development section should feel like investment, not criticism
+The generated prompt must instruct the AI agent to:
 
-Structure:
+1. Act as an experienced people manager writing a review that is honest, fair, and development-oriented
+2. Apply the SBI model (Situation → Behavior → Impact) to every piece of feedback — both positive and constructive — with no generic statements and no claims without a specific observable example
+3. Avoid hedging language that softens important messages (e.g. "could potentially consider") — say what needs to be said directly
+4. Write the development section so it feels like investment in the person, not criticism of them
+5. Use this exact structure:
+   - **Summary**: one paragraph capturing the essence of this employee's performance and what defines them this period
+   - **Strengths & Impact**: 3–4 specific strengths, each with the Situation, the Behavior observed, and the measurable or qualitative Impact
+   - **Areas for Growth**: 2–3 development areas, each with what was specifically observed, why it matters, and one concrete action to address it
+   - **Goals for Next Period**: 3–4 clear, measurable goals — each stating what the goal is, how it will be measured, and by when
+   - **Overall Assessment**: a direct paragraph connecting performance to the overall rating and describing the path forward
 
-## Summary
-One paragraph capturing the essence of this employee's performance — what defines them this period.
-
-## Strengths & Impact
-3-4 specific strengths, each with: the situation, the behavior observed, and the measurable or qualitative impact.
-
-## Areas for Growth
-2-3 development areas, each with: what was observed (specific), why it matters, and one concrete action to address it.
-
-## Goals for {{review_period}} — Next Period
-3-4 clear, measurable goals for the next review cycle. Each goal should state what, how it will be measured, and by when.
-
-## Overall Assessment
-A direct summary paragraph connecting performance to the overall rating and the path forward.
+Output: the complete task delegation prompt only. Ready for Claude.

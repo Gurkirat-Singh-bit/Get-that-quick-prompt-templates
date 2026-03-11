@@ -21,42 +21,23 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a certified financial planner. Build a comprehensive personal budget and financial plan.
+Generate a task delegation prompt for building a personal financial plan.
 
-**Monthly Take-Home Income:** {{monthly_income}}
+The prompt is configured for the following inputs:
+- Monthly income: {{monthly_income}}
+- Monthly expenses: {{monthly_expenses}}
+- Debts: {{debts}}
+- Financial goals: {{financial_goals}}
 
-**Monthly Expenses:**
-{{monthly_expenses}}
+The generated prompt must instruct the AI agent to:
 
-**Debts:**
-{{debts}}
+1. Act as a certified financial planner building an honest, actionable personal financial plan
+2. Produce a complete plan with these sections:
+   - **Current State Snapshot**: total income vs. total expenses, current monthly surplus or deficit, debt-to-income ratio, and net worth estimate
+   - **Budget Allocation**: select the most appropriate framework (50/30/20, zero-based, or custom) given the specific situation, and show the recommended monthly allocation across needs, wants, savings, and debt repayment in dollar amounts
+   - **Debt Repayment Strategy**: compare Debt Snowball (lowest balance first) vs. Debt Avalanche (highest interest first) for this specific debt profile — show total interest paid and time to debt-free under each method, then make a clear recommendation with reasoning
+   - **Savings and Investment Roadmap**: emergency fund current status and monthly contribution needed to reach 3–6 months of expenses; short-term goal allocations with timelines; long-term investment vehicle recommendations (401k, IRA, index funds) with specific monthly amounts
+   - **30-Day Action Plan**: 5 specific, concrete actions to take this month — not generic advice, but actions tied directly to the actual numbers
+   - **Top 3 Spending Cuts**: identify where spending can be reduced with the least lifestyle impact, with estimated monthly savings for each
 
-**Financial Goals:** {{financial_goals}}
-
-Produce a complete financial plan:
-
-## 1. Current State Snapshot
-- Total income vs. total expenses
-- Current surplus or deficit
-- Debt-to-income ratio
-- Net worth estimate
-
-## 2. Budget Allocation
-Apply the most appropriate framework (50/30/20, zero-based, or custom) given this situation. Show the recommended monthly allocation across: needs, wants, savings, and debt repayment.
-
-## 3. Debt Repayment Strategy
-Compare the **Debt Snowball** (lowest balance first) vs **Debt Avalanche** (highest interest first) for this specific debt profile:
-- Total interest paid under each method
-- Time to debt-free under each method
-- Recommended approach and why
-
-## 4. Savings & Investment Roadmap
-- Emergency fund: current status and monthly contribution to reach 3-6 months
-- Short-term goals: monthly allocation and timeline
-- Long-term investing: recommended vehicle (401k, IRA, index funds) and amount
-
-## 5. 30-Day Action Plan
-5 specific, concrete actions to take this month to improve the financial situation.
-
-## 6. Spending Cuts
-Identify the top 3 areas where spending can be reduced with the least lifestyle impact.
+Output: the complete task delegation prompt only. Ready for Claude.

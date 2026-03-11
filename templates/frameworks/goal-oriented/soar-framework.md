@@ -1,29 +1,32 @@
 ---
 id: "soar-framework"
-title: "SOAR Framework: Strengths, Opportunities, Aspirations, Results"
-description: "A forward-looking strategic analysis framework — identify Strengths, Opportunities, Aspirations, and measurable Results for any subject."
+title: "SOAR Framework: Strategic Analysis Agent Prompt"
+description: "Generate a SOAR-structured agent prompt to delegate forward-looking strategic analysis — Strengths, Opportunities, Aspirations, Results."
 category: "frameworks/goal-oriented"
-tags: ["soar", "framework", "strengths", "opportunities", "aspirations", "results", "strategy", "planning", "analysis"]
+tags: ["soar", "framework", "strategy", "analysis", "agent", "delegation", "planning"]
 variables:
   - name: "subject"
-    label: "Subject (organization, product, project, or individual being analyzed)"
+    label: "Subject (organization, product, team, or individual to analyze)"
     required: true
   - name: "context"
-    label: "Context (current state, industry, or relevant background)"
+    label: "Context (current state, industry, relevant background)"
     required: true
 createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-**Subject:** {{subject}}
+Generate a SOAR strategic analysis agent prompt.
 
-**Context:** {{context}}
+Configure it for:
+- Subject: {{subject}}
+- Context: {{context}}
 
-Conduct a full SOAR analysis:
+The generated prompt must instruct the agent to produce a SOAR analysis:
+1. **Strengths:** Current core capabilities, competitive advantages, and assets — evidence-based, not aspirational
+2. **Opportunities:** External conditions, trends, and gaps that {{subject}} can act on right now
+3. **Aspirations:** The ideal future state — specific, compelling, and grounded enough to drive decisions
+4. **Results:** Measurable outcomes that would confirm the aspirations are being achieved — KPIs, milestones, observable changes
 
-- **Strengths:** What are the current core strengths, unique capabilities, or competitive advantages?
-- **Opportunities:** What external opportunities, market trends, or untapped potential exist right now?
-- **Aspirations:** What does an ideal future state look like? What are the big-picture goals and ambitions?
-- **Results:** What specific, measurable outcomes and milestones would define success?
+Close with a strategic narrative that connects Strengths → Opportunities → Aspirations → Results in a coherent arc.
 
-Synthesize the analysis into a strategic narrative that connects current strengths to future aspirations through the identified opportunities, with clear results to aim for.
+Output: the complete SOAR agent prompt only. The receiving agent should produce a strategic document that is genuinely useful for planning and decision-making. Ready for Claude or any analytical AI agent.

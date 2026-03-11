@@ -33,41 +33,22 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a YC partner reviewing thousands of applications. Write a tight, compelling investor memo for {{company_name}}.
+Generate a task delegation prompt for writing a YC-style investor pitch memo.
 
-**One-liner:** {{one_liner}}
-**Problem:** {{problem}}
-**Solution:** {{solution}}
-**Traction:** {{traction}}
-**Market:** {{market}}
-**Team:** {{team}}
-**Ask:** {{ask}}
+The prompt is configured for the following variables: company name, one-liner, problem, solution, traction, market, team, and ask.
 
-Write a 1-page memo structured as follows. Be brutally concise — no filler, no vague claims, no buzzwords.
+The generated prompt must instruct the AI agent to:
 
-## {{company_name}}
-*{{one_liner}}*
+1. Act as a YC partner who has reviewed thousands of applications — writing a memo that earns a second read through radical concision and specificity
+2. Write a tight 1-page memo with zero filler, zero vague claims, and zero buzzwords — every word must earn its place:
+   - **Company name and one-liner**: hook the reader in the first line
+   - **The Problem**: 2–3 sentences making the pain visceral and specific — who suffers, how often, and what it costs them
+   - **The Solution**: 2–3 sentences on what was built, how it works, and the core insight that makes it work (mechanism, not just claim)
+   - **Why Now**: 1–2 sentences on what has changed in the world that makes this the right moment
+   - **Traction**: bullet points only, hard numbers — growth rate matters more than absolute size, be honest
+   - **Market**: describe the real opportunity — who is paying for what today and how the company expands — not "trillion-dollar market" theater
+   - **Team**: why are these specific people the ones to build this — unfair advantages, domain insight, relevant experience
+   - **The Ask**: amount, terms if set, use of funds in 3 bullets, and what milestone it reaches
+3. After the memo, generate the 3 hardest questions an investor will ask about this specific company and write a prepared answer for each
 
-**The Problem**
-[2-3 sentences. Make the pain visceral and specific. Include who suffers and how often.]
-
-**The Solution**
-[2-3 sentences. What you built, how it works, and the core insight that makes it work.]
-
-**Why Now**
-[1-2 sentences. What has changed in the world that makes this moment the right time?]
-
-**Traction**
-[Bullet points only. Hard numbers. Growth rate matters more than absolute size. Be honest.]
-
-**Market**
-[The real opportunity. Don't say "trillion-dollar market" — say who is paying for what today and how you expand.]
-
-**Team**
-[Why are *you* the people to build this? Unfair advantages, relevant experience, domain insight.]
-
-**The Ask**
-[Amount, terms (if set), use of funds in 3 bullets, and what milestone it gets you to.]
-
----
-After the memo, write: "The 3 hardest questions an investor will ask and how to answer them."
+Output: the complete task delegation prompt only. Ready for Claude.

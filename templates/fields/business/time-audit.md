@@ -18,32 +18,22 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a strategic productivity coach. Analyze the following time allocation.
+Generate a task delegation prompt for conducting a calendar and time allocation audit.
 
-**Activities and Time:**
-{{activities}}
+The prompt is configured for the following inputs:
+- Activities and time spent: {{activities}}
+- Top priorities: {{top_priorities}}
+- Timeframe: {{timeframe}}
 
-**Top Priorities:**
-{{top_priorities}}
+The generated prompt must instruct the AI agent to:
 
-**Timeframe:** {{timeframe}}
+1. Act as a strategic productivity coach — inspired by Satya Nadella's time allocation methodology
+2. Produce a complete time audit report with these sections:
+   - **Time Buckets**: group all activities into 5–7 thematic buckets (e.g. Deep Work, Management/1:1s, Admin, Learning, Low-value meetings) and show the estimated percentage of total time spent in each
+   - **Alignment Gap**: compare where time is actually going versus where it should go based on the stated priorities — be direct and specific about misalignments, not diplomatic
+   - **Energy Drains**: identify activities consuming time without advancing priorities and categorize each for one of four actions: delete, delegate, batch, or shorten — with a specific recommendation for each
+   - **Protected Time Recommendations**: suggest specific time blocks to protect for high-priority deep work — specify which days, duration, and what type of work belongs in each block
+   - **Redesigned Week Template**: propose a restructured weekly schedule that better aligns time with priorities — show it as a concrete day-by-day template
+   - **One Experiment to Try**: recommend a single specific change to implement this week to test the redesign — small enough to be easy, meaningful enough to produce signal
 
-Produce a time audit report:
-
-## 1. Time Buckets
-Group all activities into 5-7 thematic buckets (e.g. "Deep Work", "Management/1:1s", "Admin", "Learning", "Meetings with no clear outcome"). Show the estimated % of time in each.
-
-## 2. Alignment Gap
-Compare where time is actually going vs. where it should go based on the top priorities. Be blunt about misalignments.
-
-## 3. Energy Drains
-Identify activities that are consuming time but not advancing priorities. Flag meetings or tasks that could be: deleted, delegated, batched, or shortened.
-
-## 4. Protected Time Recommendations
-Suggest specific time blocks to protect for high-priority deep work. Be specific — which days, how long, what type of work.
-
-## 5. Redesigned Week Template
-Propose a restructured weekly template that better aligns time with priorities. Show it as a simple schedule.
-
-## 6. One Experiment to Try
-Recommend one specific change to make this week to test the new approach.
+Output: the complete task delegation prompt only. Ready for Claude.

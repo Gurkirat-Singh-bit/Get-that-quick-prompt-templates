@@ -1,31 +1,30 @@
 ---
 id: "rubber-duck-debug"
-title: "Rubber Duck Debugging: Explain to Understand"
-description: "Force deep understanding by explaining a concept, code, or problem as if teaching it to someone with zero prior knowledge."
+title: "Rubber Duck: Explain-to-Understand Agent Prompt"
+description: "Generate a prompt to delegate deep explanation to an AI agent — forces first-principles teaching that exposes any gaps in understanding."
 category: "frameworks/creative"
-tags: ["rubber-duck", "debugging", "teaching", "explanation", "understanding", "simplification"]
+tags: ["rubber-duck", "teaching", "explanation", "first-principles", "agent", "delegation"]
 variables:
   - name: "subject"
-    label: "Subject (the concept, code, or problem to explain)"
+    label: "Subject (concept, system, or code to explain)"
     required: true
   - name: "audience_level"
-    label: "Audience Level (e.g. 5-year-old, beginner, non-technical manager)"
+    label: "Audience Level (e.g. complete beginner, non-technical executive, junior dev)"
     required: true
 createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-**Subject:** {{subject}}
+Generate a Rubber Duck explanation agent prompt. The AI agent receiving this must explain {{subject}} to {{audience_level}} with zero assumed knowledge.
 
-**Audience Level:** {{audience_level}}
+The generated prompt must instruct the agent to:
+1. Explain what it is in the simplest possible language — ban jargon. If technical terms are unavoidable, define them in plain language immediately.
+2. Explain why it exists — what problem does it solve?
+3. Explain how it works — use an analogy from everyday life and walk through a concrete example
+4. Expose what's commonly misunderstood or oversimplified about it
+5. Rebuild the explanation from first principles — derive it without appealing to authority
+6. Close with a single sentence that captures the complete idea accurately
 
-Explain the subject above to someone who is a {{audience_level}} with absolutely no prior knowledge of it. Use the following structure:
+If the agent notices its explanation has gaps or contradictions, it must call them out explicitly.
 
-1. **What it is** — Define it in the simplest possible terms. No jargon.
-2. **Why it exists** — What problem does it solve? Why was it created?
-3. **How it works** — Walk through it step by step using an analogy or real-world example.
-4. **A concrete example** — Show it in action with a simple, relatable scenario.
-5. **Common mistakes** — What do people get wrong about this?
-6. **One-sentence summary** — Distill the entire explanation into a single clear sentence.
-
-If any part of the explanation reveals gaps or ambiguities in the subject itself, call them out explicitly.
+Output: the complete rubber duck explanation agent prompt only. The agent receiving this should produce an explanation that would genuinely enlighten a {{audience_level}}. Ready for Claude, GPT, or any explanatory AI agent.

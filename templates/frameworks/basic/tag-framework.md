@@ -1,27 +1,28 @@
 ---
 id: "tag-framework"
 title: "TAG Framework: Task, Action, Goal"
-description: "A concise 3-part framework — define the Task, specify the Action, and clarify the end Goal."
+description: "Generate a TAG-structured prompt to delegate a focused task to an AI agent — specify Task, Action, and Goal."
 category: "frameworks/basic"
-tags: ["tag", "framework", "task", "action", "goal", "beginner"]
+tags: ["tag", "framework", "prompt-generation", "delegation", "agent"]
 variables:
   - name: "task"
-    label: "Task (what needs to be done?)"
+    label: "Task (what needs to be accomplished?)"
     required: true
   - name: "action"
-    label: "Action (specific steps or approach to take)"
+    label: "Action (the specific approach or steps the agent should take)"
     required: true
   - name: "goal"
-    label: "Goal (desired outcome or end result)"
+    label: "Goal (what does success look like?)"
     required: true
 createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-**Task:** {{task}}
+Generate a concise, ready-to-use prompt using the TAG (Task, Action, Goal) framework.
 
-**Action:** {{action}}
+Apply the structure:
+- **T — Task:** Frame "{{task}}" as a clear, scoped directive the agent can act on immediately.
+- **A — Action:** Translate "{{action}}" into specific, unambiguous steps the agent must take — no room for interpretation.
+- **G — Goal:** Define "{{goal}}" as a measurable or observable outcome so the agent knows when it is done.
 
-**Goal:** {{goal}}
-
-Complete the task using the specified action, ensuring your output achieves the stated goal.
+Output: the complete TAG prompt only. No meta-commentary. Write it so the agent receiving this prompt needs zero follow-up to begin. Ready to paste into Claude, GPT, or Cursor.

@@ -24,34 +24,26 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a strategic advisor. Write a clear, concise decision memo for the following situation.
+Generate a task delegation prompt for writing a structured decision memo.
 
-**Decision:** {{decision}}
-**Context:** {{context}}
-**Options:** {{options}}
-**Decision Criteria:** {{decision_criteria}}
-**Audience:** {{audience}}
+The prompt is configured for the following inputs:
+- Decision: {{decision}}
+- Context: {{context}}
+- Options: {{options}}
+- Decision criteria: {{decision_criteria}}
+- Audience: {{audience}}
 
-Structure the memo as follows:
+The generated prompt must instruct the AI agent to:
 
-## Decision Required
-One sentence: what exactly needs to be decided and by when.
+1. Act as a strategic advisor writing a memo that enables a clear, documented decision
+2. Write a structured memo with these sections — every section must be specific and concrete, no filler:
+   - **Decision Required**: one sentence stating exactly what needs to be decided and by when
+   - **Background**: why this decision is needed now and what the cost of delay is (2–3 paragraphs)
+   - **Options Analysis**: for each option — what it actually entails, pros, cons, and a score against each decision criterion (High/Medium/Low)
+   - **Tradeoffs**: what is given up no matter which option is chosen — be honest about the core tension that no option fully resolves
+   - **Recommendation**: a clear stated recommendation with 3–4 sentences of reasoning and a direct pre-emption of the most likely objection
+   - **Next Steps**: what happens immediately after the decision is made, with named owners and deadlines
+3. Write for the specified audience — calibrate the level of detail and framing accordingly
+4. Keep the memo to a length that can be read in under 5 minutes
 
-## Background
-2-3 paragraphs of context. Why does this decision need to happen now? What happens if it is delayed?
-
-## Options Analysis
-For each option:
-- **Description:** What does this option actually entail?
-- **Pros:** What does it get right?
-- **Cons:** What does it sacrifice or risk?
-- **Score against criteria:** Rate against each decision criterion (High/Medium/Low)
-
-## Tradeoffs
-What are you giving up no matter what you choose? Be honest about the core tension.
-
-## Recommendation
-State a clear recommendation. Explain the reasoning in 3-4 sentences. Address the most likely objection directly.
-
-## Next Steps
-What needs to happen immediately after the decision is made? List owners and deadlines.
+Output: the complete task delegation prompt only. Ready for Claude.

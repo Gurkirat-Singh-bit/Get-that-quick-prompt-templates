@@ -21,29 +21,21 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior product analyst. The following metric anomaly needs investigation.
+Generate a task delegation prompt for investigating a metric anomaly.
 
-**Metric:** {{metric}}
-**Observed Change:** {{change}}
-**Product Context:** {{product_context}}
-**Recent Changes:** {{recent_changes}}
+The prompt is configured for the following inputs:
+- Metric: {{metric}}
+- Change observed: {{change}}
+- Product context: {{product_context}}
+- Recent changes: {{recent_changes}}
 
-Structure your analysis as follows:
+The generated prompt must instruct the AI agent to:
 
-## 1. Decomposition
-Break the metric into its component parts. For example, DAU = (new users + retained users + reactivated users). Identify which sub-metric is most likely to have moved.
+1. Act as a senior product analyst conducting a structured root-cause investigation
+2. Decompose the metric into its component parts (e.g. DAU = new + retained + reactivated users) and identify which sub-metric is the most likely driver of the observed change
+3. Generate 5–8 specific, falsifiable hypotheses for what caused the change — for each hypothesis: state it clearly, rate its likelihood (High/Medium/Low), and specify what data or signal would confirm or disprove it
+4. Produce a prioritized investigation checklist of queries, dashboards, or external checks to run, with each item mapped to a specific hypothesis
+5. Identify instrumentation gaps — missing tracking or data that would make this type of anomaly faster to diagnose in the future
+6. Recommend immediate actions vs. monitor-and-wait based on the highest-probability hypotheses — be specific, not generic
 
-## 2. Hypotheses
-Generate 5-8 specific, falsifiable hypotheses for what caused this change. For each:
-- State the hypothesis clearly
-- Rate the likelihood: High / Medium / Low
-- State what data or signal would confirm or disprove it
-
-## 3. Investigation Checklist
-Priority-ordered list of queries, dashboards, or external checks to run. Map each to a hypothesis.
-
-## 4. Instrumentation Gaps
-Identify any missing tracking or data that would make this faster to diagnose in the future.
-
-## 5. Recommended Actions
-Based on the most likely hypotheses, what should the team do right now vs. monitor and wait?
+Output: the complete task delegation prompt only. Ready for Claude or a data analysis agent.

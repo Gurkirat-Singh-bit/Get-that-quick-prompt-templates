@@ -27,40 +27,29 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior product manager at a technology company. Write a complete PRD for the following feature.
+Generate a task delegation prompt for writing a complete Product Requirements Document.
 
-**Feature:** {{feature_name}}
-**Target User:** {{target_user}}
-**Problem:** {{problem_statement}}
-**Business Goal:** {{business_goal}}
-**Proposed Solution:** {{proposed_solution}}
-**Out of Scope:** {{out_of_scope}}
+The prompt is configured for the following inputs:
+- Feature: {{feature_name}}
+- Problem: {{problem_statement}}
+- Target user: {{target_user}}
+- Business goal: {{business_goal}}
+- Proposed solution: {{proposed_solution}}
+- Out of scope: {{out_of_scope}}
 
-Structure the PRD as follows:
+The generated prompt must instruct the AI agent to:
 
-## 1. Problem Statement
-Articulate the user pain and business gap this feature addresses. Include the cost of not solving it.
+1. Act as a senior product manager at a technology company
+2. Write a complete PRD that includes every one of the following sections — no section may be vague, skipped, or filled with placeholders:
+   - **Problem Statement**: articulate the user pain and business gap, including the cost of not solving it
+   - **Goals & Success Metrics**: primary goal tied to the business goal, 2-3 measurable KPIs with target values, and counter-metrics to watch
+   - **User Stories**: 4-6 stories in "As a [user], I want [action] so that [outcome]" format, each with acceptance criteria
+   - **Functional Requirements**: numbered list of exactly what the feature must do
+   - **Non-Functional Requirements**: performance, security, accessibility, and scalability requirements
+   - **Scope & Phasing**: what is in MVP vs. future phases, with explicit out-of-scope items
+   - **Open Questions**: unresolved decisions needing input from engineering, design, or stakeholders
+   - **Dependencies & Risks**: potential blockers and top 3 risks
+3. Ground every section in the specific inputs provided — no generic filler
+4. Make the PRD ready to hand directly to an engineering team without revision
 
-## 2. Goals & Success Metrics
-- Primary goal (tied to {{business_goal}})
-- 2-3 measurable KPIs with target values
-- Counter-metrics to watch (what should NOT get worse)
-
-## 3. User Stories
-Write 4-6 user stories in the format: "As a [user], I want to [action] so that [outcome]."
-Include acceptance criteria for each.
-
-## 4. Functional Requirements
-Numbered list of exactly what the feature must do.
-
-## 5. Non-Functional Requirements
-Performance, security, accessibility, and scalability requirements.
-
-## 6. Scope & Phasing
-What is in MVP vs. future phases. Be explicit about what is out of scope.
-
-## 7. Open Questions
-List unresolved decisions that need input from engineering, design, or stakeholders.
-
-## 8. Dependencies & Risks
-What could block or delay this? What are the top 3 risks?
+Output: the complete task delegation prompt only. Ready to paste into Claude.

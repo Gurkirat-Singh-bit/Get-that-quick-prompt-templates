@@ -1,32 +1,32 @@
 ---
 id: "race-framework"
 title: "RACE Framework: Role, Action, Context, Expectation"
-description: "Clarify AI behavior by defining the Role, the specific Action to perform, the Context of the situation, and the Expectation for output quality."
+description: "Generate a RACE-structured prompt to delegate role-based tasks to AI agents with full context and clear expectations."
 category: "frameworks/structured"
-tags: ["race", "framework", "role", "action", "context", "expectation", "intermediate"]
+tags: ["race", "framework", "prompt-generation", "delegation", "context", "agent"]
 variables:
   - name: "role"
-    label: "Role (who is the AI in this scenario?)"
+    label: "Role (what expert is the AI agent in this scenario?)"
     required: true
   - name: "action"
-    label: "Action (what should be done?)"
+    label: "Action (what should the agent do?)"
     required: true
   - name: "context"
-    label: "Context (relevant background information)"
+    label: "Context (relevant background the agent needs)"
     required: true
   - name: "expectation"
-    label: "Expectation (what should the output include or achieve?)"
+    label: "Expectation (what must the output include or achieve?)"
     required: true
 createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-**Role:** You are {{role}}.
+Generate a ready-to-use prompt using the RACE (Role, Action, Context, Expectation) framework. This prompt will be given directly to an AI agent.
 
-**Action:** {{action}}
+Build it as follows:
+- **R — Role:** Open by assigning the agent the identity of "{{role}}" — activate the right domain knowledge and voice.
+- **A — Action:** State "{{action}}" as the agent's directive — specific, imperative, no ambiguity.
+- **C — Context:** Feed the agent "{{context}}" before asking anything — the agent needs this to make good judgment calls.
+- **E — Expectation:** Define "{{expectation}}" explicitly — what must appear in the output, what standard it must hit, and what would make it a failure.
 
-**Context:** {{context}}
-
-**Expectation:** {{expectation}}
-
-Using the context provided, perform the specified action in your assigned role. Ensure your response fully meets the stated expectation.
+Output: the complete RACE prompt only. Write it so a fresh AI agent with no prior context could read it once and execute perfectly. Ready for Claude, Cursor, GPT, or any AI.

@@ -24,36 +24,22 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior product manager running launch readiness for **{{product_name}}**, targeting **{{launch_date}}**.
+Generate a task delegation prompt for conducting a launch readiness assessment.
 
-**Current Status:** {{current_status}}
+The prompt is configured for the following inputs:
+- Product: {{product_name}}
+- Launch date: {{launch_date}}
+- Current status: {{current_status}}
+- Success criteria: {{success_criteria}}
+- Known risks: {{known_risks}}
 
-**Launch Success Criteria:** {{success_criteria}}
+The generated prompt must instruct the AI agent to:
 
-**Known Risks:** {{known_risks}}
+1. Act as a senior product manager running a launch readiness review
+2. Assess readiness across five areas — engineering completion (feature completeness, open bug backlog), QA and testing (coverage, open P0/P1 issues), rollout infrastructure (feature flags, monitoring, rollback plan), documentation and support readiness, and marketing and communications readiness
+3. Produce a risk register for all identified risks, with each entry scored by likelihood (High/Medium/Low), impact if it occurs (Critical/Significant/Minor), and a specific mitigation action
+4. Give an honest launch probability estimate (0–100%) with clear reasoning on what factors are driving the number up or down
+5. Make a single unambiguous recommendation: GO, GO WITH CONDITIONS, or NO-GO — if conditional or negative, list the exact blockers and the deadline by which each must be resolved
+6. Close with a numbered action item list covering the next 48–72 hours, with a named owner and deadline for each item
 
-Produce a full launch readiness report:
-
-## 1. Status Assessment
-Evaluate progress across:
-- Engineering completion (feature completeness, bug backlog)
-- QA & testing (coverage, open P0/P1 bugs)
-- Rollout infrastructure (feature flags, monitoring, rollback plan)
-- Documentation & support readiness
-- Marketing & communications readiness
-
-## 2. Risk Register
-For each risk, assess:
-- **Likelihood:** High / Medium / Low
-- **Impact if it occurs:** Critical / Significant / Minor
-- **Mitigation:** What can be done before launch?
-
-## 3. Launch Probability
-Give an honest probability estimate (0-100%) that the launch will be successful by {{launch_date}}. Explain the key factors driving this number up or down.
-
-## 4. Go / No-Go Recommendation
-State a clear recommendation: **GO**, **GO WITH CONDITIONS**, or **NO-GO**.
-If conditional or no-go, list the exact blockers that must be resolved and by when.
-
-## 5. Action Items
-Numbered list of owners, actions, and deadlines for the next 48-72 hours.
+Output: the complete task delegation prompt only. Ready to paste into Claude.

@@ -21,37 +21,23 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a lean startup advisor. Define the right MVP for the following.
+Generate a task delegation prompt for defining a minimum viable product.
 
-**Idea:** {{product_idea}}
-**Target User:** {{target_user}}
-**Core Hypothesis:** {{core_hypothesis}}
-**Resources:** {{resources}}
+The prompt is configured for the following inputs:
+- Product idea: {{product_idea}}
+- Target user: {{target_user}}
+- Core hypothesis: {{core_hypothesis}}
+- Resources: {{resources}}
 
-Produce an MVP definition:
+The generated prompt must instruct the AI agent to:
 
-## 1. Riskiest Assumptions (Ranked)
-List all major assumptions this business depends on. Rank them from most to least risky (most likely to kill the idea if wrong). The MVP should test assumption #1.
+1. Act as a lean startup advisor whose job is to help the founder build as little as possible while learning as much as possible
+2. List all major assumptions this business depends on being true, rank them from most to least risky (most likely to kill the idea if wrong), and identify that the MVP must test assumption #1
+3. Define the minimum feature set that tests the riskiest assumption — for each included feature: why it is necessary (which assumption it tests) and an estimated build time
+4. List features that feel important but are not needed for validation, with a reason why each is being deferred
+5. Identify whether the hypothesis can be validated without building software first — describe a specific non-product validation approach (landing page, concierge MVP, Wizard of Oz, fake door test, sales calls) if applicable
+6. Define success criteria: the specific metric that would confirm or deny the hypothesis, the minimum threshold that justifies building further, and the timeline for collecting meaningful signal
+7. If building is the right path, specify the optimal build sequence — what to ship first, what can be parallelized, what is sequential
+8. Define kill criteria before building starts — the specific result that would signal it is time to stop, pivot, or start over, so the goalposts cannot be moved later
 
-## 2. MVP Scope
-The absolute minimum feature set that tests the riskiest assumption. For each feature included:
-- Why it is necessary (what assumption it tests)
-- How long it takes to build (estimate)
-
-## 3. What to Cut
-A list of features that feel important but are not needed for validation. Why each is being deferred.
-
-## 4. Non-Product Validation Options
-Can you validate the hypothesis *without* building software first? (Landing page, concierge MVP, Wizard of Oz, sales calls, fake door test) If yes, describe the approach.
-
-## 5. Success Criteria
-How will you know if the MVP succeeded? Define:
-- The specific metric that confirms or denies the hypothesis
-- The minimum threshold that would justify building further
-- The timeline for collecting meaningful signal
-
-## 6. Build Sequence
-If building is the right path, what is the optimal order to ship features? What can be built in parallel vs. must be sequential?
-
-## 7. Kill Criteria
-What result would tell you to stop, pivot, or start over? Define this before you build so you don't move the goalposts later.
+Output: the complete task delegation prompt only. Ready for Claude or a product strategy agent.

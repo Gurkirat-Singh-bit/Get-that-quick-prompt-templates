@@ -21,36 +21,24 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior UX researcher. Create a complete user interview script.
+Generate a task delegation prompt for creating a complete user research interview script.
 
-**Research Question:** {{research_question}}
-**Participant Profile:** {{participant_profile}}
-**Context:** {{product_context}}
-**Duration:** {{duration}}
+The prompt is configured for the following inputs:
+- Research question: {{research_question}}
+- Participant profile: {{participant_profile}}
+- Product context: {{product_context}}
+- Interview duration: {{duration}}
 
-Structure the script as follows:
+The generated prompt must instruct the AI agent to:
 
-## Before the Interview (Interviewer Notes)
-- What to do if the participant goes off-topic
-- How to probe without leading
-- Body language and silence guidance
+1. Act as a senior UX researcher writing a production-ready interview guide
+2. Structure the script with time allocations that fit within the specified duration, covering these phases:
+   - **Warm-Up**: 3–4 easy, rapport-building questions about the participant's background that have no wrong answers
+   - **Current Behavior Exploration**: 5–7 open-ended questions focused on what participants actually do, not what they think or prefer — use "Tell me about the last time you..." framing exclusively; zero product pitching
+   - **Pain Points & Motivations**: 4–5 questions digging into frustrations, workarounds, and the underlying "why" — include "What happened next?" and "Why?" as mandatory follow-up probes
+   - **Concept Exploration** (if applicable): questions that explore reactions to a concept without leading the witness
+   - **Closing**: a "Is there anything you wish I had asked?" wrap-up, permission for follow-up, and a thank-you
+3. Add an interviewer notes section at the start covering: how to handle off-topic responses, how to probe without leading, and guidance on using silence productively
+4. Append a probing question cheat sheet of 8–10 universal follow-up questions usable at any point in the interview
 
-## 1. Warm-Up (5 min)
-3-4 easy, non-threatening questions to build rapport and learn about the participant's background.
-
-## 2. Current Behavior Exploration (15 min)
-5-7 open-ended questions focused on *what they actually do* — not what they think or prefer. Use "Tell me about the last time you..." framing. Zero product pitching.
-
-## 3. Pain Points & Motivations (10 min)
-4-5 questions digging into frustrations, workarounds, and underlying motivations. Use "Why" and "What happened next?" as follow-up probes.
-
-## 4. Concept Exploration (if applicable, 10 min)
-Questions to explore reactions to a solution concept without leading the witness.
-
-## 5. Closing (5 min)
-- Wrap-up question: "Is there anything you wish I had asked?"
-- Permission for follow-up contact
-- Thank you
-
-## Follow-Up Probes (Cheat Sheet)
-A reference list of 8-10 universal probing questions to use throughout.
+Output: the complete task delegation prompt only. Ready for Claude or any research-capable agent.

@@ -24,38 +24,18 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are an executive coach. Prepare a 1-on-1 agenda and talking points.
+Generate a task delegation prompt for preparing a 1-on-1 meeting.
 
-**Your Role:** {{your_role}}
-**Other Person:** {{other_person}}
-**Recent Context:** {{recent_context}}
-**Duration:** {{duration}}
-**Relationship Stage:** {{relationship_stage}}
+The prompt is configured for the following variables: your role (manager or direct report), the other person's role and context, recent context since the last 1-on-1, meeting duration, and relationship stage.
 
-Produce a complete 1-on-1 prep:
+The generated prompt must instruct the AI agent to:
 
-## Agenda (time-blocked)
-A realistic agenda for {{duration}} that balances:
-- Their updates and what's on their mind (their agenda first)
-- Key topics you need to cover
-- Feedback or recognition to share
-- Development / growth conversation
-- Action items and accountability
+1. Act as an executive coach preparing a complete, ready-to-use 1-on-1 brief
+2. Build a time-blocked agenda for the specified duration that puts their agenda first — their updates and what is on their mind come before the manager's topics
+3. Write an opening question that builds psychological safety and gets honest conversation started rather than a status report
+4. For any feedback to give: write it out word-for-word in Situation → Behavior → Impact format so it can be delivered without fumbling
+5. Prepare 3–4 questions designed to surface what the other person is not volunteering — what they are thinking, feeling, or struggling with that would not come up unprompted
+6. If the recent context or relationship stage suggests any tension or difficult topic: prepare a word-for-word opening line, a listening strategy for when they respond, and a close that leaves the conversation productive rather than unresolved
+7. Include a documentation template for the end of the meeting: commitments made, by whom, and by when
 
-## Opening Question
-One open-ended question to start with that signals psychological safety and gets them talking honestly.
-
-## Key Topics to Cover
-For each topic: what you want to say, how to frame it, and what response you're listening for.
-
-## Feedback to Give
-Any positive recognition or constructive feedback, structured as: Situation → Behavior → Impact. Write it out word-for-word so you don't stumble.
-
-## Questions to Understand Their World
-3-4 questions that help you understand what they're thinking, feeling, or struggling with that they might not volunteer.
-
-## Potential Hard Conversations
-If any tension exists, prepare: your opening line, how you'll listen before responding, and how you'll close productively.
-
-## Action Items to Capture
-A template for what to document at the end: commitments made, by whom, and by when.
+Output: the complete task delegation prompt only. Ready for Claude.

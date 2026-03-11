@@ -1,19 +1,16 @@
 ---
 id: "tech-debt-analysis"
-title: "Tech Debt Analysis: Identify, Categorize, Prioritize"
-description: "Systematically identify and prioritize technical debt in a codebase — distinguish quick wins from strategic rewrites."
+title: "Tech Debt Analyst: Task Delegation Prompt"
+description: "Generate a task prompt to delegate tech debt analysis to an AI agent — produces an inventory, impact scoring, and 90-day remediation plan."
 category: "fields/development"
-tags: ["tech-debt", "architecture", "refactor", "engineering", "planning", "development"]
+tags: ["tech-debt", "agent", "delegation", "architecture", "planning", "engineering"]
 variables:
   - name: "codebase_description"
-    label: "Codebase Description (what does the system do, rough size, age)"
+    label: "Codebase Description (what it does, age, size, team)"
     required: true
   - name: "pain_points"
-    label: "Known Pain Points (areas that are slow to change, often break, or confuse developers)"
+    label: "Known Pain Points (what slows the team down or breaks often)"
     required: true
-  - name: "team_size"
-    label: "Team Size and Velocity (e.g. 3 devs, shipping weekly)"
-    required: false
   - name: "business_context"
     label: "Business Context (growth phase, upcoming launches, constraints)"
     required: false
@@ -21,35 +18,18 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior engineering lead. Analyze the technical debt situation described below and produce a structured remediation plan.
+Generate a tech debt analysis task prompt to delegate to an AI engineering agent.
 
-**Codebase:** {{codebase_description}}
+Configure it for:
+- Codebase: {{codebase_description}}
+- Pain points: {{pain_points}}
+- Business context: {{business_context}}
 
-**Known Pain Points:** {{pain_points}}
+The generated prompt must instruct the agent to:
+1. Act as a senior engineering lead conducting a tech debt audit
+2. Categorize each pain point: deliberate debt (known shortcuts), accidental debt (poor decisions), or bit rot (aged code)
+3. Score each item on: developer velocity impact (1-5), production risk (1-5), onboarding friction (1-5)
+4. Classify each as: Quick Win (low effort, high impact) | Strategic Investment (high effort, high value) | Accept and Document (deprioritize)
+5. Produce a 90-day remediation plan in three phases: weeks 1-4, 5-8, 9-12 — balancing debt reduction with feature delivery
 
-**Team Context:** {{team_size}}
-
-**Business Context:** {{business_context}}
-
-Produce a tech debt report with the following sections:
-
-**1. Debt Inventory**
-Categorize each pain point into:
-- **Deliberate debt** (shortcuts taken knowingly)
-- **Accidental debt** (poor decisions made unknowingly)
-- **Bit rot** (code that was fine but aged poorly)
-
-**2. Impact Assessment**
-For each debt item, score:
-- Developer velocity impact (1-5)
-- Risk of production incidents (1-5)
-- Onboarding friction (1-5)
-
-**3. Prioritization Matrix**
-Classify each item as:
-- **Quick win** — low effort, high impact, do first
-- **Strategic investment** — high effort, high value, plan and schedule
-- **Accept and document** — low priority, acknowledge and move on
-
-**4. 90-Day Remediation Plan**
-A concrete, phased plan that balances debt reduction with feature delivery. Include what to tackle in weeks 1-4, 5-8, and 9-12.
+Output: the complete tech debt analysis task prompt only. Ready to hand to Claude or an engineering-focused AI agent, along with codebase context.

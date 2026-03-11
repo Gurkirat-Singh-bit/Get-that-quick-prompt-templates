@@ -21,31 +21,21 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior strategy consultant. Analyze the competitive landscape for the following.
+Generate a task delegation prompt for conducting a competitive landscape analysis.
 
-**Our Product:** {{your_product}}
-**Market:** {{market}}
-**Competitors:** {{competitors}}
-**Analysis Focus:** {{focus}}
+The prompt is configured for the following inputs:
+- Your product: {{your_product}}
+- Competitors: {{competitors}}
+- Market: {{market}}
+- Analysis focus: {{focus}}
 
-Produce a competitive analysis:
+The generated prompt must instruct the AI agent to:
 
-## 1. Market Map
-Describe the competitive landscape. Where does each competitor sit on key axes (e.g. price vs. capability, self-serve vs. enterprise, simple vs. powerful)?
+1. Act as a senior strategy consultant producing an actionable competitive analysis
+2. Build a market map describing where each competitor sits on key positioning axes (e.g. price vs. capability, self-serve vs. enterprise, broad vs. specialized)
+3. Produce a competitor profile for each listed competitor covering: core value proposition (what they claim vs. what they actually deliver), the customer profile they actually win with, genuine strengths, areas where customers complain or churn, and business model
+4. Create a feature and capability comparison matrix across all competitors and the user's product on the dimensions most relevant to the specified analysis focus
+5. Identify white space opportunities — customer needs currently underserved by the competitive field, and positioning that is unclaimed
+6. Close with a differentiation recommendation: where the user's product should focus its differentiation, what message cuts through, and what capability needs to be built or emphasized
 
-## 2. Competitor Profiles
-For each competitor, assess:
-- **Core value proposition:** What do they claim? What do they deliver?
-- **Target customer:** Who do they actually win with?
-- **Strengths:** Where are they genuinely better?
-- **Weaknesses:** Where do customers complain or churn?
-- **Business model:** How do they make money?
-
-## 3. Feature / Capability Matrix
-A table comparing key dimensions across all competitors + our product.
-
-## 4. White Space Opportunities
-Where are customer needs underserved by the current competitive field? What positions are unclaimed?
-
-## 5. Differentiation Recommendation
-Based on the analysis, where should {{your_product}} focus its differentiation? What message cuts through and what capability needs to be built or emphasized?
+Output: the complete task delegation prompt only. Ready for Claude or a strategy-capable agent.

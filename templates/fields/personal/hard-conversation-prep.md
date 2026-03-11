@@ -21,38 +21,25 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are an expert communication coach. Help me prepare for a difficult conversation.
+Generate a task delegation prompt for preparing for a difficult conversation.
 
-**Situation:** {{situation}}
-**Person:** {{person}}
-**My Goal:** {{your_goal}}
-**My Fear:** {{your_fear}}
+The prompt is configured for the following inputs:
+- Situation: {{situation}}
+- Person: {{person}}
+- Your goal: {{your_goal}}
+- Your fear: {{your_fear}}
 
-Prepare me with:
+The generated prompt must instruct the AI agent to:
 
-## 1. Get Clear on Your Intention
-What do you really want from this conversation? Distinguish between: wanting to be heard, wanting them to change, wanting a decision, wanting closure. Clarity on intent prevents conversations from going sideways.
+1. Act as an expert communication coach — the goal is to prepare the user to say what they need to say without damaging the relationship
+2. Work through these eight preparation steps:
+   - **Clarify the Real Intention**: distinguish between wanting to be heard, wanting them to change, wanting a decision, or wanting closure — clarity on intention prevents conversations from going sideways before they start
+   - **Steelman Their Perspective**: explain what might be driving the other person's behavior or position from their own experience — what are they feeling or fearing that the user may not have fully considered?
+   - **Write the Opening 3 Sentences**: the hardest part is starting — write an opening that states the topic directly (no burying it), signals the user wants to understand and not just to win, and does not immediately trigger defensiveness
+   - **Distill the Core Message**: in 1–2 sentences, what is the single most important thing the user needs to say — not everything, just the one thing
+   - **A Strategy for When It Gets Hard**: when something triggers the user during the conversation, what is the plan — offer a specific breathing technique or pause strategy to use in the moment
+   - **Phrases to Avoid**: 3–4 specific phrases that will almost certainly derail this conversation, with a suggested alternative for each
+   - **Define Success Before Starting**: what does a successful conversation look like — even if the other person does not change, leaving having said what needed to be said with the other person feeling heard is a win
+   - **Exit Plan if It Escalates**: how to pause the conversation productively without abandoning it if it escalates beyond what is useful
 
-## 2. Their Perspective
-Steelman their point of view. If they are responding defensively or doing what they're doing — what might be driving that from *their* experience? What might they be feeling or fearing?
-
-## 3. What You'll Say — Opening 3 Sentences
-The hardest part is starting. Write an opening that:
-- States the topic directly (no burying it)
-- Signals you want to understand, not just to win
-- Doesn't immediately trigger defensiveness
-
-## 4. The Core Message
-In 1-2 sentences: what is the single most important thing you need to say? Not everything — the one thing.
-
-## 5. How to Listen When It Gets Hard
-When they say something that triggers you — what is your plan? Offer a breathing technique or pause strategy to use in the moment.
-
-## 6. Phrases to Avoid
-3-4 phrases that will almost certainly derail this conversation, and what to say instead.
-
-## 7. What Success Looks Like
-Define it *before* the conversation, not after. If you leave having said what you needed to and the other person felt heard, that is a win — even if they don't change.
-
-## 8. If It Goes Wrong
-What is your exit plan if the conversation escalates? How do you pause it productively without abandoning it?
+Output: the complete task delegation prompt only. Ready for Claude.

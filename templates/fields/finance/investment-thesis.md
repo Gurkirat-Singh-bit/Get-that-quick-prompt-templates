@@ -21,36 +21,25 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a seasoned investment analyst. Build a structured investment thesis for the following.
+Generate a task delegation prompt for writing a structured investment thesis.
 
-**Asset:** {{asset}}
-**Investment Type:** {{investment_type}}
-**Known Information:**
-{{known_info}}
-**Portfolio Context:** {{portfolio_context}}
+The prompt is configured for the following inputs:
+- Asset: {{asset}}
+- Investment type: {{investment_type}}
+- Known information: {{known_info}}
+- Portfolio context: {{portfolio_context}}
 
-Structure the thesis as follows:
+The generated prompt must instruct the AI agent to:
 
-## 1. The Core Narrative (2-3 sentences)
-What is the simple, compelling story? Why does this asset have more upside than the market currently prices?
+1. Act as a seasoned investment analyst writing a thesis that is conviction-building, not just descriptive
+2. Write a structured thesis with these sections — every section must be grounded in the known information, not generic boilerplate:
+   - **Core Narrative**: 2–3 sentences — the simple, compelling story for why this asset has more upside than the market currently prices
+   - **Why Now**: what has changed recently (or will change) that creates a catalyst, inflection point, mispricing, or structural shift — not just "good company"
+   - **Bull Case**: what needs to be true for this investment to work as hoped, with key milestones
+   - **Bear Case**: the strongest honest arguments against this investment, including what would cause the core narrative to be wrong
+   - **Valuation**: use at least one relevant metric (P/E, P/S, DCF estimate, comparable transactions, token fundamentals) to assess whether this is cheap, fairly valued, or expensive
+   - **Variant View**: what does market consensus believe, where does this thesis disagree with that consensus, and why is the disagreement valid
+   - **Position Sizing Rationale**: given the risk/reward profile and portfolio context, what percentage allocation is appropriate and what would trigger adding or reducing
+   - **Exit Criteria**: define in advance what would cause a sale — a target price, a thesis-breaking event, or a scheduled review
 
-## 2. Why Now
-What has changed recently — or what will change — that makes this the right time to invest? (Catalyst, inflection point, mispricing, structural shift)
-
-## 3. Bull Case
-The scenario where this investment works as hoped. What needs to be true? What are the key milestones?
-
-## 4. Bear Case & Risk Factors
-The strongest arguments against this investment. What could go wrong? What would cause you to be wrong about the core narrative?
-
-## 5. Valuation
-Is this cheap, fairly valued, or expensive? Use at least one relevant metric (P/E, P/S, DCF estimate, comparable transactions, token fundamentals).
-
-## 6. Variant View
-What does the market consensus believe? Where does this thesis disagree with consensus, and why is that disagreement valid?
-
-## 7. Position Sizing Rationale
-Given the risk/reward and portfolio context, what % allocation is appropriate? What would trigger adding or reducing the position?
-
-## 8. Exit Criteria
-What would cause you to sell: a target price hit, a thesis-breaking event, or a time-based review?
+Output: the complete task delegation prompt only. Ready for Claude or a financial analysis agent.

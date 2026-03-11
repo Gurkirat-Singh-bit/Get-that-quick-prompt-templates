@@ -1,25 +1,28 @@
 ---
 id: "rtf-framework"
 title: "RTF Framework: Role, Task, Format"
-description: "Structure your prompt in 3 parts — define a Role, describe the Task, and specify the output Format."
+description: "Generate a clean RTF-structured prompt to delegate any task to an AI agent — define Role, Task, and output Format."
 category: "frameworks/basic"
-tags: ["rtf", "framework", "role", "task", "format", "beginner"]
+tags: ["rtf", "framework", "prompt-generation", "delegation", "agent"]
 variables:
   - name: "role"
-    label: "Role (what expert/persona should the AI be?)"
+    label: "Role (what expert should the AI agent be?)"
     required: true
   - name: "task"
-    label: "Task (what do you need done?)"
+    label: "Task (what exactly do you want the agent to do?)"
     required: true
   - name: "output_format"
-    label: "Output Format (e.g. bullet list, markdown table, JSON, paragraph)"
+    label: "Output Format (e.g. markdown report, bullet list, JSON, numbered steps)"
     required: true
 createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-**Role:** You are {{role}}.
+Generate a clean, ready-to-use prompt using the RTF (Role, Task, Format) framework.
 
-**Task:** {{task}}
+Apply the structure as follows:
+- **R — Role:** Open by establishing the AI as "{{role}}" with specific expertise. One sentence that activates the right knowledge domain.
+- **T — Task:** State "{{task}}" with full specificity — include constraints, context, and what a good result looks like.
+- **F — Format:** Require output strictly in "{{output_format}}" — define the structure, length, and any sections needed.
 
-**Format:** Provide your response in the following format: {{output_format}}
+Output: the complete RTF-structured prompt only. No explanation, no preamble. Start directly with the Role line. Make it tight, specific, and immediately usable in Claude, Cursor, or any AI.

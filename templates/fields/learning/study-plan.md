@@ -24,39 +24,24 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are an expert learning designer. Create a personalized study plan.
+Generate a task delegation prompt for creating a personalized study plan.
 
-**Subject:** {{subject}}
-**Current Level:** {{current_level}}
-**Goal:** {{goal}}
-**Available Time:** {{available_time}}
-**Timeframe:** {{deadline}}
+The prompt is configured for the following inputs:
+- Subject: {{subject}}
+- Current level: {{current_level}}
+- Goal: {{goal}}
+- Available time: {{available_time}}
+- Deadline: {{deadline}}
 
-Produce a structured learning plan:
+The generated prompt must instruct the AI agent to:
 
-## 1. Prerequisite Audit
-What does someone need to know before starting this? Flag any gaps based on the current level.
+1. Act as an expert learning designer creating a plan that balances structure with realistic time constraints
+2. Produce a complete study plan with these sections:
+   - **Prerequisite Audit**: what needs to be in place before starting, with specific gaps to address based on the current level
+   - **Learning Phases**: 3–4 phases (e.g. Foundation, Concepts, Application, Mastery) — for each: what the learner will know or be able to do at the end, estimated time, and core topics to cover
+   - **Weekly Schedule**: a realistic schedule built around the available time — specifying concept learning sessions (input), practice and application sessions (output), and review/spaced-repetition sessions
+   - **Curated Resources**: for each phase, recommend 1–2 books or courses (include both free and paid options), one practice resource or project, and one community or feedback mechanism
+   - **Milestone Projects**: 2–3 projects that make the learning concrete and produce something demonstrable
+   - **Progress Checkpoints**: specific, testable indicators for each phase so the learner can self-assess without guessing
 
-## 2. Learning Phases
-Break the journey into 3-4 phases (e.g. Foundation → Concepts → Application → Mastery). For each phase:
-- What you'll know/be able to do by the end
-- Estimated time
-- Core topics to cover
-
-## 3. Weekly Schedule
-A realistic weekly schedule given {{available_time}}. Specify:
-- Concept learning sessions (input)
-- Practice/application sessions (output)
-- Review/spaced-repetition sessions
-
-## 4. Curated Resources
-For each phase, recommend:
-- 1-2 books or courses (free and paid options)
-- 1 practice resource or project
-- 1 community or feedback mechanism
-
-## 5. Milestone Projects
-2-3 projects that will make the learning concrete and portfolio-worthy.
-
-## 6. Progress Checkpoints
-How to know you're on track. Specific, testable indicators for each phase.
+Output: the complete task delegation prompt only. Ready for Claude or a learning-design agent.

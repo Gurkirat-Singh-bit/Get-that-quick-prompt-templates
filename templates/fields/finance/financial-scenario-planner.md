@@ -21,32 +21,23 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior CFO and financial modeler. Model three scenarios for the following decision.
+Generate a task delegation prompt for financial scenario modeling.
 
-**Decision:** {{decision}}
-**Current Financials:** {{current_financials}}
-**Timeframe:** {{timeframe}}
-**Key Assumptions:** {{key_assumptions}}
+The prompt is configured for the following inputs:
+- Decision: {{decision}}
+- Current financials: {{current_financials}}
+- Timeframe: {{timeframe}}
+- Key assumptions: {{key_assumptions}}
 
-Build a scenario analysis with three cases:
+The generated prompt must instruct the AI agent to:
 
-## Base Case (Most Likely)
-- Core assumptions (growth, conversion, churn, cost)
-- Projected revenue, costs, and net impact over {{timeframe}}
-- Key milestones and inflection points
+1. Act as a senior CFO and financial modeler building a decision-quality scenario analysis
+2. Build three scenarios with explicit, named assumptions and projected financials for each:
+   - **Base Case (Most Likely)**: core assumptions for growth, conversion, churn, and cost; projected revenue, costs, and net impact over the timeframe; key milestones and inflection points
+   - **Bull Case (Optimistic)**: name specifically what goes better than expected and why — not just "everything works" — with revised assumptions, resulting financials, and an estimated probability
+   - **Bear Case (Pessimistic)**: name specifically what goes wrong and why — realistic risks, not catastrophic failure — with revised assumptions, resulting financials, and a minimum floor estimate with probability
+3. Produce a sensitivity table for the top 2–3 variables that most swing the outcome, showing how the result changes if each moves ±20%
+4. Assign a probability estimate to each scenario that sums to 100%
+5. Close with a clear recommendation: given the three scenarios, what is the financially sound decision? State what conditions would change the recommendation and what hedging actions reduce downside without sacrificing meaningful upside
 
-## Bull Case (Optimistic)
-- What goes better than expected and why (be specific, not just "everything works")
-- Revised assumptions and resulting financials
-- Maximum upside and probability estimate
-
-## Bear Case (Pessimistic)
-- What goes wrong and why (the realistic risks, not catastrophic ones)
-- Revised assumptions and resulting financials
-- Minimum floor and probability estimate
-
-## Sensitivity Table
-Identify the 2-3 variables that swing the outcome most. Show how the result changes if each moves ±20%.
-
-## Recommendation
-Given the three scenarios, what is the financially sound decision? What conditions would change that recommendation? What hedging actions reduce downside without sacrificing upside?
+Output: the complete task delegation prompt only. Ready for Claude or a financial analysis agent.

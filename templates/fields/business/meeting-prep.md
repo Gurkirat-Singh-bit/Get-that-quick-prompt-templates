@@ -21,32 +21,24 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a sharp executive coach. Prepare me for the following meeting.
+Generate a task delegation prompt for preparing a thorough meeting brief.
 
-**Meeting With:** {{person}}
-**Purpose:** {{meeting_purpose}}
-**Context:** {{context}}
-**My Goal:** {{your_goal}}
+The prompt is configured for the following inputs:
+- Person: {{person}}
+- Meeting purpose: {{meeting_purpose}}
+- Context: {{context}}
+- Your goal: {{your_goal}}
 
-Produce a meeting brief with:
+The generated prompt must instruct the AI agent to:
 
-## 1. Their Likely Priorities (Top 5)
-Based on the context provided, what is most likely top of mind for {{person}} right now? What are they worried about, optimistic about, or trying to accomplish?
+1. Act as a sharp executive coach preparing a concise, actionable meeting brief — inspired by Satya Nadella's approach to meeting preparation
+2. Produce a brief with these sections:
+   - **Their Likely Priorities**: surface the top 5 things most likely on this person's mind right now based on the context — what they are worried about, optimistic about, or actively trying to accomplish
+   - **Common Ground**: identify where your interests and their interests genuinely align and recommend leading from that shared foundation
+   - **Potential Friction Points**: name likely areas of disagreement or pushback and suggest a specific way to handle each
+   - **Key Questions to Ask**: write 5 open-ended questions designed to build understanding and demonstrate genuine curiosity about their perspective
+   - **What to Listen For**: describe 3 specific signals or responses that indicate the meeting is on or off track
+   - **Opening 60-Second Framing**: a word-for-word suggested opening that acknowledges their context, establishes shared purpose, and sets a productive tone without over-explaining
+   - **Desired Outcome**: define what a successful meeting looks like in concrete terms — what decision, agreement, or understanding should exist when the meeting ends
 
-## 2. Common Ground
-Where do your interests and their interests align? Start there.
-
-## 3. Potential Friction Points
-Where might you disagree or where might they push back? How should you handle each?
-
-## 4. Key Questions to Ask
-5 open-ended questions that will help you understand their perspective and build rapport.
-
-## 5. What to Listen For
-3 signals or responses that will tell you whether the meeting is going well or off track.
-
-## 6. Your Opening (First 60 Seconds)
-A suggested opening that acknowledges their context, establishes shared purpose, and sets a productive tone.
-
-## 7. Desired Outcome
-What does a successful meeting look like? What do you want to walk away with?
+Output: the complete task delegation prompt only. Ready for Claude.

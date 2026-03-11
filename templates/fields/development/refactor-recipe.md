@@ -1,42 +1,42 @@
 ---
 id: "refactor-recipe"
-title: "Refactor Recipe: Structured Code Improvement"
-description: "Refactor code with a clear goal — improve readability, reduce complexity, apply design patterns, or optimize performance without changing behavior."
+title: "Refactor Agent: Task Delegation Prompt"
+description: "Generate a task prompt to delegate a structured refactor to an AI coding agent — with clear goals, constraints, and a verify-behavior requirement."
 category: "fields/development"
-tags: ["refactor", "clean-code", "solid", "readability", "development", "engineering"]
+tags: ["refactor", "clean-code", "agent", "delegation", "cursor", "claude"]
 variables:
-  - name: "code"
-    label: "Code to Refactor"
-    required: true
   - name: "language"
     label: "Language / Framework"
     required: true
   - name: "refactor_goal"
-    label: "Refactor Goal (e.g. readability, extract functions, apply SOLID, reduce duplication, performance)"
+    label: "Refactor Goal (e.g. extract functions, apply SOLID, reduce duplication, improve naming)"
     required: true
-  - name: "must_not_change"
-    label: "Must Not Change (behavior, interfaces, or constraints to preserve)"
+  - name: "must_preserve"
+    label: "Must Preserve (behavior, interfaces, or APIs that cannot change)"
+    required: true
+  - name: "style_guide"
+    label: "Style Guide or Conventions (what patterns to introduce or enforce)"
     required: false
 createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior {{language}} engineer. Refactor the following code.
+Generate a refactoring task prompt to delegate to an AI coding agent (Claude, Cursor, or similar).
 
-**Refactor Goal:** {{refactor_goal}}
+Configure it for:
+- Language: {{language}}
+- Goal: {{refactor_goal}}
+- Must not change: {{must_preserve}}
+- Style guide: {{style_guide}}
 
-**Must Not Change:** {{must_not_change}}
+The generated prompt must instruct the agent to:
+1. First analyze the current code — describe the problems before touching anything
+2. List the specific refactoring steps it will take — get implicit approval before writing
+3. Implement the refactor, applying {{style_guide}} conventions throughout
+4. For each significant change: explain why it is an improvement
+5. Explicitly confirm that {{must_preserve}} is unchanged — state what tests or reasoning verify this
+6. Call out any additional refactor opportunities noticed but left out of scope
 
-**Original Code:**
-```
-{{code}}
-```
+Hard rule to include: Do not over-refactor. Only make changes needed for {{refactor_goal}}. If something wasn't asked for, mention it but don't change it.
 
-Follow this process:
-1. **Analyze** — Describe the current problems with the code (complexity, duplication, naming, violations of principles).
-2. **Plan** — List the specific refactoring steps you will take before touching the code.
-3. **Refactor** — Provide the fully refactored version.
-4. **Explain** — For each significant change, explain *why* it is better.
-5. **Verify** — Confirm that the external behavior and interfaces are unchanged. Note any assumptions made.
-
-Do not over-engineer. Make only the changes needed to achieve the stated goal. Leave a comment in the code where a further refactor opportunity exists but was intentionally left out of scope.
+Output: the complete refactor task prompt only. Ready to paste into Cursor or Claude, then provide the code to refactor.

@@ -21,37 +21,22 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior competitive intelligence analyst. Tear down {{competitor}} from the perspective of {{your_company}}.
+Generate a task delegation prompt for conducting a deep competitor teardown.
 
-**Competitor:** {{competitor}}
-**Our Company:** {{your_company}}
-**Competitive Battleground:** {{battleground}}
-**Known Information:**
-{{known_info}}
+The prompt is configured for the following inputs:
+- Competitor: {{competitor}}
+- Your company: {{your_company}}
+- Known information: {{known_info}}
+- Battleground: {{battleground}}
 
-Produce a competitor teardown:
+The generated prompt must instruct the AI agent to:
 
-## 1. Business Model Anatomy
-- How do they make money? Pricing model, tiers, expansion revenue
-- Who is their actual ICP (not stated — inferred from behavior)?
-- What is their acquisition strategy? (SEO, sales, PLG, partnerships)
+1. Act as a senior competitive intelligence analyst tearing down the competitor from the perspective of the user's company — the goal is actionable intelligence, not a balanced essay
+2. Analyze the competitor's business model: how they make money (pricing, tiers, expansion revenue), who their actual ICP is inferred from behavior (not just stated), and what their acquisition strategy is (SEO, sales, PLG, partnerships)
+3. Honestly assess where they are genuinely strong — what they do better than anyone and what would make a customer choose them over the user's product
+4. Identify where they are weak or vulnerable: product gaps inferred from reviews and community complaints, strategic blind spots (markets they ignore, segments they underserve), and organizational debt (legacy tech, slow release cadence, heavy sales motion)
+5. Predict their competitive playbook: how they will respond when they lose a deal to the user's company and what their likely counter-move is
+6. Provide specific, non-generic tactics for winning in the contested battleground: positioning language that makes differences concrete, use cases where the user wins by default, and which customer profiles to prioritize vs. avoid
+7. Produce a watch list of 2–3 signals that would indicate the competitor's strategy is changing in ways that create new threats
 
-## 2. Where They Are Genuinely Strong
-Be honest. What do they do better than anyone? What would make a customer choose them?
-
-## 3. Where They Are Weak or Vulnerable
-- Product gaps (based on reviews, community complaints, feature requests)
-- Strategic blind spots (markets they ignore, segments they under-serve)
-- Organizational debt (legacy tech, large sales motion, slow release cadence)
-
-## 4. Their Playbook Against You
-How will they respond when you win a customer from them? What is their likely competitive counter-move?
-
-## 5. How to Beat Them
-Specific, non-generic tactics for the contested {{battleground}}:
-- Positioning language that makes our differences concrete
-- Use cases where we win by default
-- Customers we should go after first (and avoid)
-
-## 6. Watch List
-2-3 signals that would indicate their strategy is changing in ways that threaten us.
+Output: the complete task delegation prompt only. Ready for Claude or a competitive intelligence agent.

@@ -21,32 +21,23 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior UX designer with expertise in usability heuristics and conversion optimization.
+Generate a task delegation prompt for conducting a structured UX audit.
 
-**Product:** {{product}}
-**Platform:** {{platform}}
-**User Goal:** {{user_goal}}
+The prompt is configured for the following inputs:
+- Product: {{product}}
+- User flow: {{user_flow}}
+- User goal: {{user_goal}}
+- Platform: {{platform}}
 
-**Flow to Audit:**
-{{user_flow}}
+The generated prompt must instruct the AI agent to:
 
-Audit against Nielsen's 10 Usability Heuristics:
+1. Act as a senior UX designer with expertise in usability heuristics and conversion optimization
+2. Evaluate the described flow against all 10 of Nielsen's Usability Heuristics: Visibility of System Status, Match with Real World, User Control & Freedom, Consistency & Standards, Error Prevention, Recognition over Recall, Flexibility & Efficiency, Aesthetic & Minimalist Design, Error Recovery, and Help & Documentation
+3. For every violation found, produce a structured entry with:
+   - Severity rating: Critical (blocks task completion) / Major (causes significant frustration) / Minor (polish issue)
+   - Which heuristic is violated
+   - A specific description of what is wrong and exactly where in the flow it occurs
+   - A concrete fix with a rationale explaining why it resolves the issue
+4. Conclude with the top 5 highest-impact improvements, ranked by effort-to-impact ratio — include an estimate of effort (Low/Medium/High) and expected impact (Low/Medium/High) for each
 
-1. **Visibility of System Status** — Does the user always know what's happening?
-2. **Match with Real World** — Does the language and flow match user mental models?
-3. **User Control & Freedom** — Can users undo, go back, and recover from errors?
-4. **Consistency & Standards** — Are patterns consistent with platform conventions?
-5. **Error Prevention** — Does the design prevent errors before they happen?
-6. **Recognition over Recall** — Are options visible rather than requiring memory?
-7. **Flexibility & Efficiency** — Are there shortcuts for experienced users?
-8. **Aesthetic & Minimalist Design** — Is every element earning its place?
-9. **Error Recovery** — Are error messages clear and actionable?
-10. **Help & Documentation** — Is help available and easy to find?
-
-For each violation found:
-- **Severity:** Critical (blocks completion) / Major (frustrates users) / Minor (polish issue)
-- **Heuristic violated**
-- **Specific description of the problem**
-- **Recommended fix with rationale**
-
-Conclude with the top 5 highest-impact improvements ranked by effort-to-impact ratio.
+Output: the complete task delegation prompt only. Ready for Claude or any UX-capable agent.

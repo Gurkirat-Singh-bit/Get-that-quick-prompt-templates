@@ -1,47 +1,45 @@
 ---
 id: "master-framework"
 title: "MASTER Framework: Mindset, Audience, Style, Tone, Expertise, Rules"
-description: "A 6-part expert-level framework for fully customized AI interactions — set Mindset, Audience, Style, Tone, Expertise level, and governing Rules."
+description: "Generate a MASTER-configured system prompt — a 6-axis agent configuration for interactions requiring full behavioral customization."
 category: "frameworks/advanced"
-tags: ["master", "framework", "mindset", "audience", "style", "tone", "expertise", "rules", "advanced"]
+tags: ["master", "framework", "system-prompt", "agent-config", "advanced", "customization"]
 variables:
   - name: "mindset"
-    label: "Mindset (the mental approach or perspective, e.g. growth, analytical, creative)"
+    label: "Mindset (the approach/perspective: analytical, creative, growth, pragmatic)"
     required: true
   - name: "audience"
-    label: "Audience (who the output is for)"
+    label: "Audience (who the agent's outputs are for)"
     required: true
   - name: "style"
-    label: "Style (writing or communication style)"
+    label: "Style (communication style: concise, narrative, Socratic, instructional)"
     required: true
   - name: "tone"
-    label: "Tone (emotional quality, e.g. motivating, clinical, Socratic)"
+    label: "Tone (emotional register: direct, empathetic, clinical, motivating)"
     required: true
   - name: "expertise"
-    label: "Expertise Level (novice / intermediate / expert audience)"
+    label: "Expertise Level (calibrate depth for: beginner / intermediate / expert audience)"
     required: true
   - name: "task"
-    label: "Task (what needs to be done)"
+    label: "Task (what this agent will handle)"
     required: true
   - name: "rules"
-    label: "Rules (non-negotiable constraints or requirements)"
+    label: "Rules (hard constraints that cannot be violated)"
     required: true
 createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-**Mindset:** Approach this task with a {{mindset}} mindset.
+Generate a fully-configured agent system prompt using the MASTER framework. This is for when you need complete behavioral control over an AI agent.
 
-**Audience:** Your output is tailored for: {{audience}}
+Configure all six axes:
+- **M — Mindset:** Lock the agent into a "{{mindset}}" approach — this shapes how it thinks, not just what it says.
+- **A — Audience:** Calibrate everything for "{{audience}}" — vocabulary, assumed knowledge, what to explain vs. skip.
+- **S — Style:** Enforce "{{style}}" as the agent's communication pattern — give concrete examples of what this style looks and doesn't look like.
+- **T — Tone:** Set "{{tone}}" as the emotional register — describe what it sounds like in practice.
+- **E — Expertise:** Dial depth to "{{expertise}}" — be specific about what level of technical detail is appropriate.
+- **R — Rules:** Hard-code "{{rules}}" as inviolable constraints — the agent must apply these in every response, no exceptions.
 
-**Style:** Use a {{style}} communication style.
+The agent handles: {{task}}
 
-**Tone:** Maintain a {{tone}} tone throughout.
-
-**Expertise:** Calibrate the complexity, vocabulary, and depth for a {{expertise}} level audience.
-
-**Task:** {{task}}
-
-**Rules:** Strictly adhere to: {{rules}}
-
-With this full configuration in mind, produce a response that perfectly matches the mindset, audience, style, tone, and expertise level while following all stated rules without exception.
+Output: the complete MASTER system prompt only. Structured so pasting it into Claude Projects or an API system parameter immediately creates a fully tuned agent. No placeholders — every axis fully defined.

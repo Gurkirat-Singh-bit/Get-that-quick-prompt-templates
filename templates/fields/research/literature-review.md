@@ -24,38 +24,18 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are an experienced academic researcher and thesis advisor. Produce a structured literature review.
+Generate a task delegation prompt for structuring a literature review.
 
-**Topic:** {{research_topic}}
-**Field:** {{field}}
-**Scope:** {{scope}}
-**Known Works:** {{papers_or_themes}}
-**Your Contribution:** {{your_contribution}}
+The prompt is configured for the following variables: research topic, academic field, scope, key papers or themes already known, and the researcher's planned contribution.
 
-Structure the literature review as follows:
+The generated prompt must instruct the AI agent to:
 
-## 1. Search Strategy
-- Recommended databases and search engines (Google Scholar, PubMed, JSTOR, Semantic Scholar, etc.)
-- Key search terms and Boolean combinations to use
-- Inclusion/exclusion criteria for selecting papers
+1. Act as an experienced academic researcher and thesis advisor helping to map and frame a body of literature
+2. Recommend a search strategy: which databases to use (Google Scholar, PubMed, JSTOR, Semantic Scholar, etc.), specific search terms and Boolean combinations, and inclusion/exclusion criteria for selecting papers within the defined scope
+3. Organize the existing literature into 4–6 thematic streams, for each stream: state the core argument or claim, note key representative studies, describe the methodological approaches used, and trace how thinking has evolved over time
+4. Identify areas of consensus, active debates or contradictions, and methodological disputes in the field
+5. Surface 3–5 significant research gaps — questions unanswered, populations unstudied, methods not applied, or contradictions unresolved
+6. Explain how the researcher's planned contribution addresses one or more of these gaps and position it clearly within the landscape
+7. Suggest a written review outline with headings and subheadings
 
-## 2. Thematic Map
-Organize the existing literature into 4-6 major themes or schools of thought. For each:
-- Core argument or claim of this body of work
-- Key representative studies (even if hypothetical given scope)
-- Methodological approaches used
-- Evolution of thinking over time
-
-## 3. Agreements & Debates
-- What do researchers broadly agree on?
-- Where are the active debates or contradictions?
-- What methodological disputes exist?
-
-## 4. Research Gaps
-The 3-5 most significant gaps in the literature — questions that remain unanswered, populations unstudied, methods not applied, or contradictions unresolved.
-
-## 5. How Your Work Fits
-Explain how {{your_contribution}} addresses one or more of these gaps. Position it clearly within the landscape.
-
-## 6. Recommended Review Structure
-A suggested outline for the actual written literature review (headings and subheadings).
+Output: the complete task delegation prompt only. Ready for Claude or a research agent.

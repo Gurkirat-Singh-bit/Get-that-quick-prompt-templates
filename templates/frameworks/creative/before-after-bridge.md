@@ -1,40 +1,40 @@
 ---
 id: "before-after-bridge"
-title: "Before-After-Bridge (BAB): Transformation Narrative"
-description: "A classic copywriting and persuasion framework — describe the current state (Before), paint the desired state (After), and explain the Bridge that gets there."
+title: "Before-After-Bridge: Transformation Narrative Agent Prompt"
+description: "Generate a BAB-structured prompt to delegate transformation storytelling to an AI agent — for pitches, landing pages, sales copy, or change communication."
 category: "frameworks/creative"
-tags: ["bab", "before-after-bridge", "copywriting", "persuasion", "narrative", "transformation"]
+tags: ["bab", "before-after-bridge", "copywriting", "narrative", "agent", "delegation"]
 variables:
   - name: "subject"
-    label: "Subject (product, idea, service, or solution)"
+    label: "Subject (product, idea, or change being pitched)"
     required: true
   - name: "audience"
     label: "Audience (who this is written for)"
     required: true
   - name: "current_state"
-    label: "Before (current painful or undesirable state)"
+    label: "Before (the painful current state)"
     required: true
   - name: "desired_state"
-    label: "After (ideal future state after the transformation)"
+    label: "After (the ideal state after transformation)"
     required: true
 createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-**Subject:** {{subject}}
+Generate a Before-After-Bridge (BAB) copywriting agent prompt. The output will be a task prompt handed to Claude or another writing agent.
 
-**Audience:** {{audience}}
+Configure it for:
+- Subject: {{subject}}
+- Audience: {{audience}}
+- Current state: {{current_state}}
+- Desired state: {{desired_state}}
 
-Write a persuasive BAB (Before-After-Bridge) narrative:
+The generated prompt must instruct the writing agent to:
+1. **Before:** Open by immersing {{audience}} in the pain of {{current_state}} — make it visceral and specific, not generic
+2. **After:** Paint {{desired_state}} as a concrete, emotionally resonant reality — not features, but how life feels
+3. **Bridge:** Explain exactly how {{subject}} bridges the gap — the mechanism, not just the claim. Why does it work?
+4. End with a clear CTA
 
-**Before:** {{current_state}}
+Style requirements to include in the prompt: no jargon, active voice, short paragraphs, first paragraph is the hook.
 
-Paint this state vividly for {{audience}} — make the pain, friction, or limitation feel real and relatable. What does this cost them in time, money, stress, or opportunity?
-
-**After:** {{desired_state}}
-
-Describe the ideal future state after using {{subject}}. Make it concrete, tangible, and emotionally resonant. What does life look and feel like now?
-
-**Bridge:** Explain exactly how {{subject}} is the bridge between the Before and After states. Be specific about the mechanism — what it does, how it works, and why it uniquely delivers the transformation.
-
-End with a clear call to action.
+Output: the complete BAB agent prompt only. The writing agent receiving this should produce finished copy with no further direction. Ready for Claude, GPT, or any writing-capable AI.

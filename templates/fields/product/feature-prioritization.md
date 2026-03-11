@@ -21,28 +21,22 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior product manager. Prioritize the following feature backlog against the business goal.
+Generate a task delegation prompt for prioritizing a feature backlog.
 
-**Business Goal:** {{business_goal}}
-**Primary User:** {{user_segment}}
-**Constraints:** {{constraints}}
+The prompt is configured for the following inputs:
+- Features to prioritize: {{features}}
+- Business goal: {{business_goal}}
+- Constraints: {{constraints}}
+- Primary user segment: {{user_segment}}
 
-**Features to prioritize:**
-{{features}}
+The generated prompt must instruct the AI agent to:
 
-Score each feature using two frameworks:
+1. Act as a senior product manager conducting a rigorous backlog prioritization
+2. Score every feature using RICE: Reach (users affected per quarter), Impact (3=massive / 2=high / 1=medium / 0.5=low / 0.25=minimal), Confidence (100% / 80% / 50%), and Effort (person-weeks) — show the calculation for each
+3. Classify every feature using MoSCoW: Must Have / Should Have / Could Have / Won't Have this cycle — with a one-sentence rationale for each classification
+4. Produce a ranked table combining both frameworks
+5. Recommend the top 3 features to build next with a full paragraph of justification for each, grounded in the business goal and constraints
+6. Identify features that should be deferred and explain why
+7. Call out any features that need more discovery or user research before they can be reliably prioritized — and describe what that discovery would look like
 
-**RICE Score** (Reach × Impact × Confidence ÷ Effort):
-- Reach: users affected per quarter (estimate)
-- Impact: effect on goal (3=massive, 2=high, 1=medium, 0.5=low, 0.25=minimal)
-- Confidence: certainty in estimates (100%/80%/50%)
-- Effort: person-weeks
-
-**MoSCoW Classification:**
-- Must Have / Should Have / Could Have / Won't Have (this cycle)
-
-Produce:
-1. A scored table with RICE ranking
-2. Your top 3 recommended features to build next, with a one-paragraph justification for each
-3. Features you recommend deferring and why
-4. Any features that need more discovery before they can be prioritized
+Output: the complete task delegation prompt only. Ready for Claude or any strategic AI agent.

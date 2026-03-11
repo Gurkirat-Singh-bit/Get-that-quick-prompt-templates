@@ -1,34 +1,33 @@
 ---
 id: "trace-framework"
 title: "TRACE Framework: Topic, Reason, Audience, Counterargument, Evidence"
-description: "Build persuasive, well-reasoned arguments — define the Topic, Reason, Audience, Counterarguments to address, and supporting Evidence."
+description: "Generate a TRACE-structured prompt to delegate persuasive writing or argumentation to an AI agent — with built-in counterargument handling."
 category: "frameworks/advanced"
-tags: ["trace", "framework", "topic", "reason", "audience", "counterargument", "evidence", "persuasion", "debate", "advanced"]
+tags: ["trace", "framework", "prompt-generation", "persuasion", "argumentation", "agent"]
 variables:
   - name: "topic"
-    label: "Topic (the subject or claim being argued)"
+    label: "Topic (the claim or position to argue)"
     required: true
   - name: "reason"
-    label: "Reason (why this topic matters or why this position is correct)"
+    label: "Reason (why this position is correct or important)"
     required: true
   - name: "audience"
-    label: "Audience (who you are writing for or trying to persuade)"
+    label: "Audience (who needs to be persuaded)"
     required: true
   - name: "evidence"
-    label: "Evidence (data, examples, studies, or facts to support the argument)"
+    label: "Evidence (data, examples, or facts available to use)"
     required: true
 createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-**Topic:** {{topic}}
+Generate a persuasion-focused agent prompt using the TRACE (Topic, Reason, Audience, Counterargument, Evidence) framework.
 
-**Reason:** {{reason}}
+Build it as follows:
+- **T — Topic:** Assign the agent the position: "{{topic}}" — stated as a clear, arguable claim.
+- **R — Reason:** Give the agent "{{reason}}" — the core logic it must build its argument around.
+- **A — Audience:** Define "{{audience}}" in detail — their biases, knowledge level, and what kind of argument moves them.
+- **C — Counterargument:** Instruct the agent to proactively identify and address the 2-3 strongest opposing arguments before they are raised — this is non-negotiable.
+- **E — Evidence:** Provide "{{evidence}}" and require the agent to anchor every major claim to this evidence.
 
-**Audience:** This argument is directed at: {{audience}}
-
-**Counterargument:** Identify the strongest opposing viewpoints or objections to this position. Address each one directly and honestly before dismantling them.
-
-**Evidence:** Support the argument using: {{evidence}}
-
-Construct a compelling, well-structured argument on the topic. Clearly address the audience's perspective, proactively acknowledge and counter opposing views, and ground every claim in the provided evidence.
+Output: the complete TRACE agent prompt only. The prompt should force the agent to build a case that is both persuasive AND intellectually honest about opposition. Ready to hand to Claude, GPT, or any writing agent.

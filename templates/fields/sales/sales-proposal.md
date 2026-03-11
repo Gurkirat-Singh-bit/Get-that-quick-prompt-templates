@@ -27,43 +27,28 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are a senior enterprise account executive. Write a compelling sales proposal for {{prospect_name}}.
+Generate a task delegation prompt for writing a sales proposal.
 
-**Their Problem:** {{their_problem}}
-**Your Solution:** {{your_solution}}
-**Pricing:** {{pricing}}
-**Timeline:** {{timeline}}
-**Success Metrics:** {{success_metrics}}
+The prompt is configured for the following inputs:
+- Prospect name: {{prospect_name}}
+- Their problem: {{their_problem}}
+- Your solution: {{your_solution}}
+- Pricing: {{pricing}}
+- Timeline: {{timeline}}
+- Success metrics: {{success_metrics}}
 
-Structure:
+The generated prompt must instruct the AI agent to:
 
-## For {{prospect_name}} — Executive Summary
-2 paragraphs: Mirror back their problem in their language, then state your solution and the outcome they can expect. This page alone should be shareable to an executive who won't read the rest.
+1. Act as a senior enterprise account executive writing a proposal designed to close — not just to inform
+2. Write a proposal with this exact structure:
+   - **Executive Summary**: 2 paragraphs — mirror back the prospect's problem in their own language, then state the solution and the expected outcome; this section alone must be shareable to an executive who will not read the rest
+   - **The Problem We're Solving Together**: articulate their current state, the cost of inaction, and the consequences they have described — make them feel deeply understood before anything is pitched
+   - **Our Proposed Solution**: exactly what is being delivered, how, and in what sequence — no vague capabilities, only concrete deliverables
+   - **The ROI Case**: quantify the expected impact in the prospect's terms — time saved multiplied by cost, revenue upside, risk reduction value, and comparison to the cost of the status quo
+   - **Investment**: present the pricing as an investment against the ROI calculated above, not as a line-item cost
+   - **Implementation Timeline**: key milestones, who owns what, and what success looks like at each stage
+   - **Success Criteria**: the specific metrics that will be used to measure outcomes, agreed upfront
+   - **Why Us**: exactly 3 reasons specific to this deal — not a generic company pitch
+   - **Next Steps**: one clear action — what they sign, what happens next, and what their team needs to do to begin
 
-## The Problem We're Solving Together
-Articulate their current state, the cost of inaction, and the consequences they've described. Make them feel deeply understood before you pitch anything.
-
-## Our Proposed Solution
-What exactly is being delivered, how, and in what sequence. Be specific. No vague capabilities — only concrete deliverables.
-
-## Why This Works: The ROI Case
-Quantify the expected impact in their terms. Use their numbers where possible:
-- Time saved × hourly cost
-- Revenue upside
-- Risk reduction value
-- Comparison to cost of status quo
-
-## Investment
-Clear pricing presented as an investment against the ROI above, not as a line-item cost.
-
-## Implementation Timeline
-Key milestones, who owns what, and what success looks like at each stage.
-
-## Success Criteria
-The specific metrics we'll use to measure outcomes — agreed upfront.
-
-## Why Us
-3 reasons, specific to this deal — not generic company pitch.
-
-## Next Steps
-One clear action: what they sign, what happens after, and what their team needs to do to get started.
+Output: the complete task delegation prompt only. Ready for Claude or a sales writing agent.

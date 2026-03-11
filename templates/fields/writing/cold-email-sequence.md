@@ -21,36 +21,21 @@ createdAt: "2026-03-11T00:00:00Z"
 updatedAt: "2026-03-11T00:00:00Z"
 ---
 
-You are an expert B2B copywriter. Write a 3-touch cold email sequence.
+Generate a task delegation prompt for writing a 3-touch cold email sequence.
 
-**Sender:** {{sender_role}}
-**Recipient:** {{recipient_profile}}
-**Value Proposition:** {{value_proposition}}
-**Proof:** {{proof}}
+The prompt is configured for the following inputs:
+- Sender: {{sender_role}}
+- Recipient: {{recipient_profile}}
+- Value proposition: {{value_proposition}}
+- Proof: {{proof}}
 
-Write 3 emails:
+The generated prompt must instruct the AI agent to:
 
----
+1. Act as an expert B2B copywriter who writes email sequences that earn replies without being pushy
+2. Write a 3-email sequence with the following structure:
+   - **Email 1 — Value-First Introduction (Day 1)**: specific subject line that references their situation (no clickbait), one-sentence opening that shows genuine research, body connecting a concrete problem they likely face to the value proposition using the proof point, one low-friction CTA (a yes/no question, not "jump on a call"), under 100 words
+   - **Email 2 — Different Angle (Day 4)**: new subject line, different opening approach, lead with a relevant insight or data point for their role or industry, connect it to the value proposition, slightly warmer CTA, under 100 words
+   - **Email 3 — Graceful Breakup (Day 9)**: subject line that creates a response paradox (e.g. "Should I close your file?"), acknowledge prior outreach without guilt-tripping, one-sentence final value statement, an easy opt-out that paradoxically increases response rate, under 50 words
+3. After each email, include a brief note explaining the psychological or strategic reason the approach works
 
-**Email 1: The Value-First Introduction (Day 1)**
-- Subject line: specific, no clickbait, ideally references their situation
-- Opening: one sentence showing you've done your research on them/their company
-- Body: one specific, concrete problem they likely have → your relevant result (use {{proof}})
-- CTA: one low-friction ask (not "jump on a call" — a yes/no question or share of a resource)
-- Length: under 100 words
-
-**Email 2: The Different Angle (Day 4)**
-- Different subject line, different approach
-- Lead with insight or data relevant to their role/industry
-- Connect the insight to your value prop
-- CTA: slightly warmer ask
-- Length: under 100 words
-
-**Email 3: The Graceful Breakup (Day 9)**
-- Subject: "Re: [original subject]" or "Should I close your file?"
-- Acknowledge you've reached out twice
-- Final value statement in one sentence
-- Easy out that paradoxically makes them more likely to respond
-- Length: under 50 words
-
-For each email, add a brief note on why this approach works.
+Output: the complete task delegation prompt only. Ready for Claude or a copywriting agent.
